@@ -1,0 +1,601 @@
+empleado_id,sede,area,genero,educacion_nivel,antiguedad_anios,grupo_fruta
+1,Buenos Aires,Ventas,Masculino,Universitario,8,Tratamiento
+2,Mar del Plata,Ingenieria,Femenino,Posgrado,8,Control
+3,Mendoza,Producto,Femenino,Universitario,4,Tratamiento
+4,Rosario,Producto,Masculino,Universitario,1,Tratamiento
+5,Rosario,Operaciones,Masculino,Posgrado,3,Tratamiento
+6,Bahia Blanca,Producto,Masculino,Universitario,9,Control
+7,Buenos Aires,Ingenieria,Masculino,Universitario,10,Tratamiento
+8,Mar del Plata,Ventas,Femenino,Universitario,11,Control
+9,Cordoba,Ingenieria,Femenino,Terciario,2,Control
+10,Buenos Aires,Ingenieria,Femenino,Universitario,7,Tratamiento
+11,Mendoza,Producto,Masculino,Terciario,1,Tratamiento
+12,Bahia Blanca,Ingenieria,Masculino,Terciario,8,Control
+13,Mar del Plata,Ingenieria,Masculino,Universitario,4,Control
+14,Mar del Plata,Ingenieria,No binario,Universitario,8,Control
+15,Mar del Plata,Ingenieria,No binario,Posgrado,8,Control
+16,Mar del Plata,Ingenieria,Masculino,Terciario,11,Control
+17,Mendoza,Ingenieria,Femenino,Terciario,5,Tratamiento
+18,Buenos Aires,Ventas,Femenino,Posgrado,4,Tratamiento
+19,Bahia Blanca,Ingenieria,Femenino,Terciario,6,Control
+20,Rosario,RRHH,Masculino,Terciario,1,Tratamiento
+21,Mendoza,Operaciones,Femenino,Terciario,1,Tratamiento
+22,Rosario,Producto,Masculino,Universitario,6,Tratamiento
+23,Cordoba,Ingenieria,Masculino,Posgrado,9,Control
+24,Bahia Blanca,Producto,Masculino,Universitario,6,Control
+25,Mar del Plata,Operaciones,Femenino,Universitario,9,Control
+26,Mendoza,Ventas,Femenino,Terciario,2,Tratamiento
+27,Rosario,Operaciones,Femenino,Universitario,5,Tratamiento
+28,Mar del Plata,Producto,Masculino,Universitario,7,Control
+29,Mendoza,Ventas,Masculino,Terciario,4,Tratamiento
+30,Rosario,Ingenieria,Masculino,Terciario,0,Tratamiento
+31,Rosario,Ventas,Femenino,Terciario,0,Tratamiento
+32,Cordoba,Ingenieria,Femenino,Terciario,11,Control
+33,Buenos Aires,Ventas,Femenino,Universitario,7,Tratamiento
+34,Mendoza,Operaciones,Masculino,Universitario,3,Tratamiento
+35,Bahia Blanca,Ingenieria,Masculino,Secundario,3,Control
+36,Buenos Aires,Ventas,Femenino,Universitario,0,Tratamiento
+37,Bahia Blanca,Ingenieria,Masculino,Universitario,11,Control
+38,Mar del Plata,Ventas,Femenino,Universitario,1,Control
+39,Cordoba,Ingenieria,Masculino,Posgrado,9,Control
+40,Mendoza,RRHH,Femenino,Universitario,2,Tratamiento
+41,Buenos Aires,Ingenieria,Femenino,Posgrado,4,Tratamiento
+42,Mar del Plata,RRHH,Masculino,Terciario,3,Control
+43,Mar del Plata,Operaciones,Femenino,Universitario,9,Control
+44,Rosario,Producto,Femenino,Terciario,0,Tratamiento
+45,Buenos Aires,Ventas,Masculino,Universitario,4,Tratamiento
+46,Bahia Blanca,Ventas,Femenino,Universitario,3,Control
+47,Rosario,RRHH,Masculino,Terciario,3,Tratamiento
+48,Bahia Blanca,Ingenieria,Masculino,Universitario,2,Control
+49,Mar del Plata,Producto,Masculino,Terciario,10,Control
+50,Mar del Plata,Ingenieria,Femenino,Terciario,4,Control
+51,Mar del Plata,Ventas,Masculino,Terciario,5,Control
+52,Cordoba,Ingenieria,Femenino,Universitario,4,Control
+53,Rosario,Producto,Femenino,Terciario,11,Tratamiento
+54,Rosario,Producto,Femenino,Universitario,4,Tratamiento
+55,Rosario,Producto,Masculino,Terciario,4,Tratamiento
+56,Buenos Aires,Producto,Masculino,Universitario,3,Tratamiento
+57,Mendoza,Ventas,Masculino,Posgrado,3,Tratamiento
+58,Buenos Aires,Ventas,Masculino,Universitario,1,Tratamiento
+59,Mar del Plata,Producto,Masculino,Universitario,7,Control
+60,Mar del Plata,Producto,Masculino,Posgrado,0,Control
+61,Bahia Blanca,RRHH,Masculino,Posgrado,2,Control
+62,Mar del Plata,Ingenieria,Masculino,Universitario,2,Control
+63,Rosario,Ingenieria,Femenino,Posgrado,3,Tratamiento
+64,Bahia Blanca,Ingenieria,Femenino,Posgrado,9,Control
+65,Rosario,Ventas,Masculino,Universitario,7,Tratamiento
+66,Cordoba,Ingenieria,Masculino,Universitario,11,Control
+67,Bahia Blanca,Ventas,Masculino,Secundario,4,Control
+68,Rosario,Ventas,Femenino,Secundario,11,Tratamiento
+69,Buenos Aires,Ingenieria,Masculino,Universitario,0,Tratamiento
+70,Rosario,Operaciones,Femenino,Universitario,6,Tratamiento
+71,Mar del Plata,Ventas,Femenino,Universitario,9,Control
+72,Cordoba,Ingenieria,Femenino,Universitario,6,Control
+73,Rosario,Ingenieria,Femenino,Universitario,11,Tratamiento
+74,Buenos Aires,Ingenieria,Masculino,Posgrado,3,Tratamiento
+75,Mar del Plata,Ingenieria,Femenino,Terciario,0,Control
+76,Rosario,Ingenieria,Masculino,Terciario,9,Tratamiento
+77,Cordoba,RRHH,Masculino,Universitario,0,Control
+78,Cordoba,Ingenieria,Femenino,Posgrado,9,Control
+79,Mendoza,Ingenieria,Masculino,Posgrado,8,Tratamiento
+80,Mar del Plata,Ventas,Femenino,Posgrado,10,Control
+81,Bahia Blanca,Producto,No binario,Posgrado,5,Control
+82,Rosario,RRHH,Masculino,Terciario,10,Tratamiento
+83,Buenos Aires,Ventas,Masculino,Universitario,2,Tratamiento
+84,Mar del Plata,Producto,Masculino,Terciario,5,Control
+85,Mendoza,Ingenieria,Femenino,Universitario,1,Tratamiento
+86,Mar del Plata,RRHH,Masculino,Posgrado,9,Control
+87,Buenos Aires,Ventas,Femenino,Terciario,8,Tratamiento
+88,Cordoba,RRHH,Femenino,Universitario,9,Control
+89,Mar del Plata,Ingenieria,Femenino,Terciario,9,Control
+90,Mar del Plata,Operaciones,Masculino,Terciario,3,Control
+91,Rosario,Ventas,Masculino,Terciario,0,Tratamiento
+92,Mar del Plata,Ingenieria,Masculino,Secundario,11,Control
+93,Bahia Blanca,Producto,Masculino,Posgrado,5,Control
+94,Rosario,Ventas,Femenino,Universitario,1,Tratamiento
+95,Bahia Blanca,Ingenieria,Masculino,Posgrado,11,Control
+96,Cordoba,Producto,Masculino,Universitario,11,Control
+97,Cordoba,Operaciones,Masculino,Terciario,5,Control
+98,Mar del Plata,Ingenieria,Femenino,Terciario,9,Control
+99,Mendoza,Producto,No binario,Posgrado,0,Tratamiento
+100,Buenos Aires,Ingenieria,Femenino,Terciario,1,Tratamiento
+101,Mar del Plata,Ingenieria,Femenino,Posgrado,3,Control
+102,Cordoba,Operaciones,Masculino,Terciario,7,Control
+103,Mar del Plata,Ventas,Femenino,Universitario,1,Control
+104,Buenos Aires,Ingenieria,Femenino,Posgrado,0,Tratamiento
+105,Mar del Plata,RRHH,Masculino,Terciario,8,Control
+106,Mar del Plata,Operaciones,Femenino,Terciario,9,Control
+107,Mar del Plata,Ingenieria,Masculino,Posgrado,8,Control
+108,Mendoza,Operaciones,Femenino,Terciario,9,Tratamiento
+109,Rosario,Ingenieria,Masculino,Universitario,9,Tratamiento
+110,Mar del Plata,RRHH,Masculino,Universitario,7,Control
+111,Cordoba,Ventas,Masculino,Terciario,6,Control
+112,Mar del Plata,Ventas,Masculino,Universitario,10,Control
+113,Mendoza,Ingenieria,Masculino,Universitario,4,Tratamiento
+114,Rosario,Operaciones,Masculino,Universitario,1,Tratamiento
+115,Mendoza,Ingenieria,Femenino,Posgrado,9,Tratamiento
+116,Mendoza,Ingenieria,Femenino,Terciario,3,Tratamiento
+117,Buenos Aires,Ingenieria,Masculino,Secundario,11,Tratamiento
+118,Buenos Aires,Ventas,Masculino,Universitario,4,Tratamiento
+119,Cordoba,Ingenieria,Femenino,Posgrado,10,Control
+120,Buenos Aires,Operaciones,Masculino,Secundario,0,Tratamiento
+121,Rosario,Ventas,Masculino,Terciario,7,Tratamiento
+122,Mar del Plata,Ingenieria,Masculino,Universitario,5,Control
+123,Mendoza,Ingenieria,No binario,Posgrado,5,Tratamiento
+124,Rosario,Ingenieria,Masculino,Secundario,3,Tratamiento
+125,Bahia Blanca,Ventas,Masculino,Universitario,11,Control
+126,Mendoza,Operaciones,Femenino,Universitario,4,Tratamiento
+127,Buenos Aires,Ingenieria,Masculino,Universitario,10,Tratamiento
+128,Mar del Plata,Operaciones,Femenino,Terciario,5,Control
+129,Mendoza,Ingenieria,Masculino,Terciario,0,Tratamiento
+130,Mendoza,Operaciones,Femenino,Universitario,10,Tratamiento
+131,Mendoza,RRHH,Masculino,Universitario,2,Tratamiento
+132,Mendoza,Ventas,Masculino,Posgrado,3,Tratamiento
+133,Buenos Aires,Ventas,Masculino,Universitario,10,Tratamiento
+134,Mendoza,Operaciones,Masculino,Universitario,10,Tratamiento
+135,Mar del Plata,Ingenieria,Femenino,Posgrado,11,Control
+136,Cordoba,Ingenieria,Masculino,Universitario,5,Control
+137,Mendoza,Ingenieria,Femenino,Universitario,9,Tratamiento
+138,Buenos Aires,Producto,Femenino,Posgrado,3,Tratamiento
+139,Rosario,Ventas,Masculino,Terciario,8,Tratamiento
+140,Rosario,Ventas,Femenino,Universitario,6,Tratamiento
+141,Bahia Blanca,Operaciones,Femenino,Universitario,0,Control
+142,Cordoba,Ingenieria,Masculino,Secundario,5,Control
+143,Cordoba,Ventas,Masculino,Universitario,5,Control
+144,Rosario,Ingenieria,Masculino,Terciario,3,Tratamiento
+145,Bahia Blanca,Ingenieria,Femenino,Terciario,4,Control
+146,Bahia Blanca,Ventas,Femenino,Universitario,6,Control
+147,Buenos Aires,RRHH,Femenino,Terciario,0,Tratamiento
+148,Cordoba,Ventas,Masculino,Universitario,1,Control
+149,Mar del Plata,Ingenieria,Masculino,Posgrado,9,Control
+150,Buenos Aires,Ventas,Femenino,Posgrado,4,Tratamiento
+151,Bahia Blanca,Ingenieria,Masculino,Terciario,7,Control
+152,Cordoba,Operaciones,Femenino,Terciario,6,Control
+153,Bahia Blanca,Ventas,Femenino,Terciario,6,Control
+154,Cordoba,Ingenieria,Femenino,Terciario,4,Control
+155,Rosario,Ingenieria,Femenino,Posgrado,5,Tratamiento
+156,Mendoza,Ingenieria,Masculino,Universitario,9,Tratamiento
+157,Buenos Aires,RRHH,Masculino,Terciario,11,Tratamiento
+158,Mendoza,Producto,Femenino,Posgrado,3,Tratamiento
+159,Mendoza,Ventas,Masculino,Universitario,8,Tratamiento
+160,Mar del Plata,Ventas,Masculino,Secundario,11,Control
+161,Bahia Blanca,Producto,Masculino,Terciario,0,Control
+162,Mendoza,Ingenieria,Masculino,Universitario,9,Tratamiento
+163,Rosario,RRHH,Femenino,Universitario,5,Tratamiento
+164,Rosario,Ingenieria,Masculino,Terciario,11,Tratamiento
+165,Rosario,Producto,Femenino,Posgrado,6,Tratamiento
+166,Mar del Plata,Ventas,No binario,Posgrado,10,Control
+167,Cordoba,Ventas,Femenino,Posgrado,1,Control
+168,Cordoba,RRHH,Masculino,Terciario,1,Control
+169,Rosario,Ingenieria,Femenino,Secundario,11,Tratamiento
+170,Buenos Aires,Producto,Femenino,Posgrado,6,Tratamiento
+171,Buenos Aires,Ingenieria,Masculino,Terciario,6,Tratamiento
+172,Buenos Aires,Producto,Masculino,Universitario,2,Tratamiento
+173,Mar del Plata,Ingenieria,Masculino,Universitario,2,Control
+174,Mar del Plata,Ingenieria,Masculino,Terciario,9,Control
+175,Mar del Plata,Ingenieria,Masculino,Universitario,3,Control
+176,Rosario,Ingenieria,Femenino,Posgrado,7,Tratamiento
+177,Mar del Plata,Ingenieria,Masculino,Universitario,3,Control
+178,Buenos Aires,Ventas,Masculino,Universitario,3,Tratamiento
+179,Bahia Blanca,Ventas,Masculino,Posgrado,1,Control
+180,Mendoza,Ingenieria,Femenino,Universitario,11,Tratamiento
+181,Bahia Blanca,Ingenieria,Femenino,Universitario,11,Control
+182,Buenos Aires,Ingenieria,Masculino,Posgrado,1,Tratamiento
+183,Rosario,Producto,Masculino,Universitario,4,Tratamiento
+184,Mar del Plata,Ingenieria,Masculino,Terciario,6,Control
+185,Rosario,Ingenieria,No binario,Terciario,4,Tratamiento
+186,Rosario,Ingenieria,Masculino,Terciario,8,Tratamiento
+187,Buenos Aires,Producto,Masculino,Universitario,3,Tratamiento
+188,Rosario,Ingenieria,Masculino,Universitario,0,Tratamiento
+189,Cordoba,Producto,Masculino,Universitario,4,Control
+190,Cordoba,Producto,Masculino,Universitario,7,Control
+191,Mar del Plata,Ventas,Femenino,Universitario,2,Control
+192,Mendoza,Ventas,Masculino,Posgrado,9,Tratamiento
+193,Mendoza,Ventas,Femenino,Terciario,0,Tratamiento
+194,Rosario,Ingenieria,Femenino,Universitario,0,Tratamiento
+195,Bahia Blanca,Ventas,Masculino,Universitario,6,Control
+196,Buenos Aires,Producto,Femenino,Universitario,6,Tratamiento
+197,Rosario,Ingenieria,Femenino,Terciario,3,Tratamiento
+198,Buenos Aires,Ventas,Masculino,Universitario,3,Tratamiento
+199,Rosario,Ingenieria,Masculino,Posgrado,0,Tratamiento
+200,Bahia Blanca,Producto,Femenino,Universitario,7,Control
+201,Rosario,Ventas,Femenino,Posgrado,4,Tratamiento
+202,Bahia Blanca,Operaciones,Femenino,Posgrado,1,Control
+203,Rosario,RRHH,Masculino,Universitario,4,Tratamiento
+204,Mar del Plata,Producto,Masculino,Universitario,11,Control
+205,Rosario,Producto,Femenino,Universitario,3,Tratamiento
+206,Cordoba,Ventas,Masculino,Posgrado,10,Control
+207,Mar del Plata,Ingenieria,Femenino,Secundario,3,Control
+208,Bahia Blanca,Operaciones,Femenino,Universitario,2,Control
+209,Cordoba,Producto,No binario,Posgrado,3,Control
+210,Mar del Plata,Ingenieria,Femenino,Terciario,3,Control
+211,Cordoba,Ingenieria,Femenino,Universitario,1,Control
+212,Mar del Plata,Operaciones,Masculino,Universitario,7,Control
+213,Mar del Plata,Ingenieria,Masculino,Posgrado,4,Control
+214,Rosario,Ingenieria,Masculino,Posgrado,8,Tratamiento
+215,Mar del Plata,Ingenieria,No binario,Terciario,5,Control
+216,Cordoba,Ingenieria,Femenino,Universitario,5,Control
+217,Buenos Aires,Ingenieria,Femenino,Terciario,5,Tratamiento
+218,Buenos Aires,Ventas,Masculino,Universitario,1,Tratamiento
+219,Rosario,Ingenieria,Femenino,Universitario,8,Tratamiento
+220,Bahia Blanca,Operaciones,Masculino,Posgrado,1,Control
+221,Buenos Aires,Operaciones,Masculino,Secundario,8,Tratamiento
+222,Rosario,Ingenieria,Femenino,Terciario,11,Tratamiento
+223,Mar del Plata,Ingenieria,Masculino,Universitario,9,Control
+224,Cordoba,Ventas,Femenino,Universitario,5,Control
+225,Mar del Plata,Ingenieria,Masculino,Universitario,3,Control
+226,Cordoba,Ingenieria,Masculino,Secundario,10,Control
+227,Mar del Plata,RRHH,Masculino,Terciario,3,Control
+228,Mendoza,RRHH,Masculino,Posgrado,5,Tratamiento
+229,Mendoza,Ventas,Masculino,Secundario,9,Tratamiento
+230,Cordoba,Ingenieria,No binario,Universitario,11,Control
+231,Rosario,Ventas,No binario,Posgrado,11,Tratamiento
+232,Bahia Blanca,Ventas,Masculino,Secundario,1,Control
+233,Buenos Aires,Ingenieria,Femenino,Universitario,10,Tratamiento
+234,Mar del Plata,Ventas,Masculino,Terciario,1,Control
+235,Rosario,Ingenieria,No binario,Posgrado,7,Tratamiento
+236,Mar del Plata,Ingenieria,Femenino,Universitario,11,Control
+237,Mendoza,Producto,Masculino,Posgrado,7,Tratamiento
+238,Rosario,Ingenieria,Masculino,Terciario,11,Tratamiento
+239,Cordoba,Ingenieria,Femenino,Universitario,4,Control
+240,Mendoza,Operaciones,Masculino,Universitario,3,Tratamiento
+241,Buenos Aires,RRHH,Femenino,Terciario,3,Tratamiento
+242,Mendoza,Producto,Masculino,Terciario,4,Tratamiento
+243,Buenos Aires,Operaciones,Masculino,Secundario,8,Tratamiento
+244,Mendoza,RRHH,Masculino,Posgrado,5,Tratamiento
+245,Mendoza,Ingenieria,Femenino,Universitario,8,Tratamiento
+246,Buenos Aires,Ingenieria,Femenino,Universitario,4,Tratamiento
+247,Mar del Plata,Ingenieria,Masculino,Universitario,3,Control
+248,Rosario,Ingenieria,Masculino,Universitario,2,Tratamiento
+249,Mar del Plata,Ventas,Masculino,Universitario,6,Control
+250,Buenos Aires,Ingenieria,Masculino,Universitario,10,Tratamiento
+251,Cordoba,Producto,Femenino,Universitario,10,Control
+252,Rosario,Ingenieria,Masculino,Terciario,3,Tratamiento
+253,Cordoba,Ingenieria,Femenino,Posgrado,5,Control
+254,Cordoba,Operaciones,Femenino,Posgrado,8,Control
+255,Mendoza,Ingenieria,Masculino,Terciario,7,Tratamiento
+256,Buenos Aires,Ingenieria,Femenino,Universitario,0,Tratamiento
+257,Mar del Plata,Ingenieria,Femenino,Terciario,7,Control
+258,Buenos Aires,Producto,Femenino,Posgrado,0,Tratamiento
+259,Cordoba,Producto,Masculino,Posgrado,1,Control
+260,Mendoza,Producto,Masculino,Posgrado,7,Tratamiento
+261,Mar del Plata,Ingenieria,Femenino,Terciario,1,Control
+262,Cordoba,Ingenieria,Masculino,Terciario,4,Control
+263,Cordoba,Operaciones,Masculino,Terciario,7,Control
+264,Bahia Blanca,Ventas,Femenino,Secundario,7,Control
+265,Bahia Blanca,Ventas,Femenino,Terciario,5,Control
+266,Mendoza,Ventas,Masculino,Secundario,1,Tratamiento
+267,Rosario,Ventas,Masculino,Posgrado,9,Tratamiento
+268,Rosario,Ingenieria,Masculino,Secundario,11,Tratamiento
+269,Mendoza,Ingenieria,Masculino,Terciario,10,Tratamiento
+270,Mendoza,Producto,Femenino,Posgrado,8,Tratamiento
+271,Cordoba,Ingenieria,Femenino,Universitario,4,Control
+272,Buenos Aires,Operaciones,Masculino,Universitario,10,Tratamiento
+273,Buenos Aires,Producto,Femenino,Universitario,5,Tratamiento
+274,Bahia Blanca,Ventas,Masculino,Posgrado,1,Control
+275,Rosario,Operaciones,Masculino,Universitario,10,Tratamiento
+276,Rosario,Producto,Masculino,Universitario,3,Tratamiento
+277,Rosario,Operaciones,Masculino,Universitario,11,Tratamiento
+278,Mar del Plata,Producto,Femenino,Universitario,4,Control
+279,Buenos Aires,Operaciones,Femenino,Terciario,10,Tratamiento
+280,Buenos Aires,Ingenieria,Femenino,Universitario,6,Tratamiento
+281,Cordoba,Producto,Masculino,Terciario,5,Control
+282,Rosario,Producto,Femenino,Universitario,3,Tratamiento
+283,Mar del Plata,Ingenieria,Femenino,Terciario,10,Control
+284,Rosario,Ingenieria,Femenino,Terciario,0,Tratamiento
+285,Rosario,Operaciones,Femenino,Terciario,5,Tratamiento
+286,Bahia Blanca,Ventas,Masculino,Posgrado,4,Control
+287,Buenos Aires,Ingenieria,Femenino,Terciario,6,Tratamiento
+288,Mendoza,Ingenieria,No binario,Universitario,3,Tratamiento
+289,Mendoza,Ingenieria,Femenino,Posgrado,7,Tratamiento
+290,Rosario,Ingenieria,Masculino,Secundario,4,Tratamiento
+291,Mar del Plata,RRHH,Masculino,Universitario,2,Control
+292,Cordoba,Ingenieria,Femenino,Terciario,2,Control
+293,Bahia Blanca,Ingenieria,Masculino,Terciario,8,Control
+294,Cordoba,Producto,No binario,Universitario,3,Control
+295,Mendoza,Ingenieria,Masculino,Posgrado,3,Tratamiento
+296,Mendoza,Ingenieria,Femenino,Terciario,7,Tratamiento
+297,Bahia Blanca,Ventas,Femenino,Universitario,3,Control
+298,Rosario,Ventas,Masculino,Terciario,4,Tratamiento
+299,Cordoba,RRHH,Femenino,Universitario,2,Control
+300,Buenos Aires,Ventas,Masculino,Universitario,4,Tratamiento
+301,Rosario,Producto,Masculino,Universitario,8,Tratamiento
+302,Mar del Plata,Ventas,Masculino,Universitario,6,Control
+303,Buenos Aires,Operaciones,Masculino,Terciario,11,Tratamiento
+304,Bahia Blanca,Ventas,Masculino,Universitario,9,Control
+305,Mendoza,RRHH,Femenino,Universitario,0,Tratamiento
+306,Buenos Aires,Ventas,Femenino,Universitario,4,Tratamiento
+307,Cordoba,Operaciones,Masculino,Secundario,3,Control
+308,Mendoza,Ingenieria,Masculino,Universitario,7,Tratamiento
+309,Cordoba,Ventas,Femenino,Universitario,3,Control
+310,Buenos Aires,Ingenieria,Femenino,Secundario,11,Tratamiento
+311,Mendoza,Producto,Masculino,Terciario,3,Tratamiento
+312,Mar del Plata,Ventas,Masculino,Universitario,6,Control
+313,Buenos Aires,RRHH,Masculino,Universitario,1,Tratamiento
+314,Cordoba,RRHH,Femenino,Terciario,10,Control
+315,Cordoba,Ingenieria,Femenino,Posgrado,10,Control
+316,Mendoza,Ventas,Masculino,Universitario,9,Tratamiento
+317,Mar del Plata,Ventas,Femenino,Universitario,4,Control
+318,Mar del Plata,Ingenieria,Masculino,Universitario,0,Control
+319,Bahia Blanca,Ingenieria,Masculino,Universitario,8,Control
+320,Mar del Plata,Ingenieria,Femenino,Universitario,5,Control
+321,Cordoba,Ventas,Femenino,Posgrado,11,Control
+322,Buenos Aires,Producto,Femenino,Universitario,8,Tratamiento
+323,Mendoza,RRHH,Masculino,Universitario,6,Tratamiento
+324,Bahia Blanca,Producto,Masculino,Universitario,11,Control
+325,Bahia Blanca,RRHH,Femenino,Universitario,9,Control
+326,Cordoba,Ingenieria,Masculino,Secundario,5,Control
+327,Cordoba,Ventas,Masculino,Universitario,0,Control
+328,Buenos Aires,Ingenieria,Masculino,Universitario,1,Tratamiento
+329,Buenos Aires,Producto,Masculino,Posgrado,5,Tratamiento
+330,Mendoza,Operaciones,Femenino,Universitario,6,Tratamiento
+331,Mendoza,RRHH,Femenino,Universitario,0,Tratamiento
+332,Rosario,Operaciones,Masculino,Posgrado,1,Tratamiento
+333,Cordoba,Ingenieria,Femenino,Universitario,8,Control
+334,Mar del Plata,Ingenieria,Masculino,Terciario,9,Control
+335,Rosario,Ingenieria,Femenino,Terciario,0,Tratamiento
+336,Mar del Plata,Ingenieria,Femenino,Secundario,6,Control
+337,Bahia Blanca,Ventas,Femenino,Secundario,0,Control
+338,Cordoba,Ventas,Masculino,Universitario,8,Control
+339,Cordoba,Ventas,Femenino,Universitario,10,Control
+340,Bahia Blanca,Operaciones,Femenino,Universitario,10,Control
+341,Mendoza,Ventas,Masculino,Secundario,7,Tratamiento
+342,Cordoba,Operaciones,Femenino,Universitario,7,Control
+343,Mendoza,Ingenieria,Femenino,Terciario,11,Tratamiento
+344,Mendoza,Ingenieria,Femenino,Posgrado,7,Tratamiento
+345,Bahia Blanca,Ventas,Femenino,Terciario,5,Control
+346,Cordoba,Operaciones,Femenino,Universitario,9,Control
+347,Bahia Blanca,Ingenieria,Masculino,Terciario,7,Control
+348,Bahia Blanca,Producto,Femenino,Universitario,10,Control
+349,Cordoba,Ventas,Masculino,Universitario,6,Control
+350,Buenos Aires,Ingenieria,Masculino,Universitario,10,Tratamiento
+351,Mendoza,Ingenieria,Femenino,Terciario,0,Tratamiento
+352,Buenos Aires,Operaciones,Femenino,Posgrado,0,Tratamiento
+353,Cordoba,Ventas,Femenino,Universitario,1,Control
+354,Rosario,Ingenieria,Masculino,Universitario,6,Tratamiento
+355,Bahia Blanca,Operaciones,Femenino,Posgrado,8,Control
+356,Bahia Blanca,Ingenieria,Masculino,Posgrado,2,Control
+357,Buenos Aires,Operaciones,Masculino,Terciario,1,Tratamiento
+358,Bahia Blanca,Ingenieria,Masculino,Terciario,10,Control
+359,Buenos Aires,Producto,Masculino,Terciario,9,Tratamiento
+360,Mar del Plata,Ingenieria,No binario,Terciario,7,Control
+361,Bahia Blanca,Ingenieria,Femenino,Universitario,5,Control
+362,Bahia Blanca,Operaciones,Femenino,Posgrado,5,Control
+363,Cordoba,Ingenieria,Femenino,Posgrado,0,Control
+364,Bahia Blanca,Ingenieria,Masculino,Universitario,2,Control
+365,Buenos Aires,Ingenieria,Masculino,Universitario,10,Tratamiento
+366,Mendoza,Ventas,Masculino,Posgrado,4,Tratamiento
+367,Rosario,Operaciones,Femenino,Posgrado,8,Tratamiento
+368,Cordoba,RRHH,No binario,Terciario,8,Control
+369,Buenos Aires,Ingenieria,Masculino,Universitario,3,Tratamiento
+370,Mar del Plata,Ingenieria,Masculino,Posgrado,2,Control
+371,Rosario,Ingenieria,No binario,Terciario,8,Tratamiento
+372,Mendoza,Producto,Femenino,Universitario,1,Tratamiento
+373,Rosario,RRHH,Femenino,Posgrado,5,Tratamiento
+374,Rosario,Ventas,Masculino,Posgrado,10,Tratamiento
+375,Bahia Blanca,Producto,Femenino,Posgrado,8,Control
+376,Buenos Aires,Ingenieria,Femenino,Universitario,9,Tratamiento
+377,Mar del Plata,Operaciones,Femenino,Terciario,0,Control
+378,Mar del Plata,Producto,Femenino,Terciario,2,Control
+379,Rosario,Ingenieria,Masculino,Universitario,3,Tratamiento
+380,Cordoba,Ingenieria,Masculino,Universitario,3,Control
+381,Buenos Aires,Ingenieria,Femenino,Universitario,2,Tratamiento
+382,Bahia Blanca,Ingenieria,Femenino,Universitario,11,Control
+383,Bahia Blanca,Ingenieria,Masculino,Universitario,1,Control
+384,Cordoba,Producto,Masculino,Universitario,8,Control
+385,Buenos Aires,Ventas,Masculino,Terciario,7,Tratamiento
+386,Buenos Aires,Ingenieria,Masculino,Terciario,7,Tratamiento
+387,Buenos Aires,Ingenieria,Femenino,Terciario,2,Tratamiento
+388,Mar del Plata,RRHH,Femenino,Terciario,3,Control
+389,Bahia Blanca,Ventas,Masculino,Posgrado,7,Control
+390,Buenos Aires,Producto,Masculino,Universitario,3,Tratamiento
+391,Mar del Plata,Ingenieria,Masculino,Terciario,8,Control
+392,Cordoba,Operaciones,Masculino,Universitario,0,Control
+393,Rosario,Ingenieria,Masculino,Universitario,0,Tratamiento
+394,Mendoza,Ingenieria,Femenino,Secundario,8,Tratamiento
+395,Mar del Plata,Operaciones,Femenino,Terciario,7,Control
+396,Bahia Blanca,Producto,Femenino,Terciario,0,Control
+397,Buenos Aires,Ventas,Femenino,Universitario,10,Tratamiento
+398,Cordoba,Producto,Femenino,Terciario,0,Control
+399,Cordoba,Ventas,Masculino,Secundario,11,Control
+400,Cordoba,Ingenieria,Femenino,Secundario,8,Control
+401,Bahia Blanca,Ingenieria,Femenino,Universitario,11,Control
+402,Mar del Plata,Ingenieria,Masculino,Secundario,11,Control
+403,Cordoba,Ingenieria,Masculino,Posgrado,3,Control
+404,Bahia Blanca,Operaciones,Femenino,Terciario,9,Control
+405,Rosario,Ingenieria,Masculino,Universitario,2,Tratamiento
+406,Mendoza,Producto,Masculino,Universitario,5,Tratamiento
+407,Rosario,Ventas,Masculino,Universitario,2,Tratamiento
+408,Buenos Aires,Ventas,Masculino,Secundario,5,Tratamiento
+409,Bahia Blanca,Ingenieria,Femenino,Posgrado,10,Control
+410,Buenos Aires,Producto,Masculino,Posgrado,5,Tratamiento
+411,Cordoba,RRHH,Femenino,Secundario,1,Control
+412,Cordoba,Ventas,Masculino,Terciario,3,Control
+413,Cordoba,Operaciones,Masculino,Posgrado,9,Control
+414,Buenos Aires,Operaciones,Femenino,Universitario,6,Tratamiento
+415,Buenos Aires,Ventas,Femenino,Terciario,6,Tratamiento
+416,Mar del Plata,Ingenieria,Masculino,Terciario,5,Control
+417,Bahia Blanca,Producto,Masculino,Universitario,3,Control
+418,Buenos Aires,Ingenieria,Femenino,Universitario,7,Tratamiento
+419,Cordoba,Ventas,Masculino,Universitario,7,Control
+420,Mendoza,RRHH,Masculino,Posgrado,10,Tratamiento
+421,Bahia Blanca,Producto,Masculino,Universitario,7,Control
+422,Mar del Plata,Ingenieria,Masculino,Terciario,11,Control
+423,Mar del Plata,Ingenieria,Femenino,Universitario,9,Control
+424,Mendoza,RRHH,Masculino,Universitario,0,Tratamiento
+425,Rosario,Ingenieria,Femenino,Terciario,4,Tratamiento
+426,Cordoba,Ingenieria,Masculino,Secundario,4,Control
+427,Bahia Blanca,Ingenieria,Femenino,Universitario,0,Control
+428,Mar del Plata,Ingenieria,Masculino,Universitario,2,Control
+429,Buenos Aires,Producto,Femenino,Secundario,9,Tratamiento
+430,Mar del Plata,Producto,Femenino,Universitario,4,Control
+431,Buenos Aires,Ingenieria,Masculino,Universitario,1,Tratamiento
+432,Mar del Plata,Ingenieria,Masculino,Universitario,3,Control
+433,Mar del Plata,Ingenieria,Masculino,Universitario,3,Control
+434,Buenos Aires,Ingenieria,Masculino,Posgrado,2,Tratamiento
+435,Rosario,Ingenieria,Masculino,Universitario,1,Tratamiento
+436,Buenos Aires,Ventas,Masculino,Terciario,9,Tratamiento
+437,Mendoza,Ingenieria,Femenino,Universitario,9,Tratamiento
+438,Bahia Blanca,Ingenieria,Masculino,Universitario,5,Control
+439,Buenos Aires,Ingenieria,Masculino,Terciario,7,Tratamiento
+440,Rosario,Ingenieria,Femenino,Secundario,11,Tratamiento
+441,Bahia Blanca,Ingenieria,Femenino,Terciario,10,Control
+442,Cordoba,Ingenieria,Masculino,Universitario,0,Control
+443,Buenos Aires,Operaciones,Masculino,Universitario,11,Tratamiento
+444,Rosario,Ingenieria,Masculino,Terciario,0,Tratamiento
+445,Mendoza,Producto,No binario,Posgrado,0,Tratamiento
+446,Mendoza,Producto,Masculino,Posgrado,4,Tratamiento
+447,Cordoba,Ingenieria,Masculino,Terciario,8,Control
+448,Bahia Blanca,Ingenieria,Femenino,Posgrado,0,Control
+449,Mendoza,Ventas,Femenino,Secundario,3,Tratamiento
+450,Cordoba,Operaciones,Femenino,Posgrado,3,Control
+451,Bahia Blanca,Ingenieria,Masculino,Posgrado,4,Control
+452,Bahia Blanca,Ingenieria,Masculino,Secundario,11,Control
+453,Rosario,Ingenieria,Femenino,Universitario,3,Tratamiento
+454,Buenos Aires,Producto,Femenino,Posgrado,2,Tratamiento
+455,Mendoza,Ventas,Masculino,Posgrado,1,Tratamiento
+456,Mendoza,Ingenieria,Femenino,Posgrado,2,Tratamiento
+457,Buenos Aires,Ingenieria,Masculino,Universitario,1,Tratamiento
+458,Mendoza,RRHH,Masculino,Secundario,6,Tratamiento
+459,Bahia Blanca,Ingenieria,Masculino,Posgrado,5,Control
+460,Buenos Aires,Producto,Femenino,Universitario,5,Tratamiento
+461,Mar del Plata,Ventas,Masculino,Universitario,9,Control
+462,Buenos Aires,Ingenieria,Femenino,Universitario,6,Tratamiento
+463,Mar del Plata,Ingenieria,Masculino,Universitario,1,Control
+464,Rosario,Ingenieria,Femenino,Terciario,4,Tratamiento
+465,Buenos Aires,Operaciones,Masculino,Universitario,3,Tratamiento
+466,Bahia Blanca,Ingenieria,Masculino,Secundario,9,Control
+467,Buenos Aires,Ingenieria,Femenino,Universitario,3,Tratamiento
+468,Mendoza,Ingenieria,Femenino,Posgrado,1,Tratamiento
+469,Cordoba,Ingenieria,Femenino,Universitario,8,Control
+470,Bahia Blanca,Ventas,Femenino,Universitario,5,Control
+471,Mar del Plata,Ingenieria,Femenino,Terciario,1,Control
+472,Mar del Plata,Producto,Masculino,Posgrado,8,Control
+473,Rosario,Producto,Femenino,Universitario,2,Tratamiento
+474,Rosario,Operaciones,Masculino,Universitario,10,Tratamiento
+475,Mendoza,Ingenieria,No binario,Terciario,9,Tratamiento
+476,Mar del Plata,Operaciones,Femenino,Terciario,4,Control
+477,Bahia Blanca,Ventas,Masculino,Universitario,6,Control
+478,Buenos Aires,Ingenieria,Masculino,Posgrado,6,Tratamiento
+479,Mendoza,Ventas,Masculino,Universitario,7,Tratamiento
+480,Buenos Aires,Operaciones,Masculino,Terciario,0,Tratamiento
+481,Cordoba,Ingenieria,Masculino,Posgrado,3,Control
+482,Mar del Plata,Operaciones,Femenino,Universitario,2,Control
+483,Cordoba,Producto,Masculino,Posgrado,8,Control
+484,Mar del Plata,Ventas,No binario,Terciario,0,Control
+485,Rosario,RRHH,Masculino,Universitario,6,Tratamiento
+486,Cordoba,Ingenieria,Femenino,Posgrado,8,Control
+487,Rosario,Operaciones,Masculino,Terciario,11,Tratamiento
+488,Mendoza,Ingenieria,Femenino,Universitario,3,Tratamiento
+489,Mar del Plata,Ventas,Masculino,Posgrado,0,Control
+490,Mendoza,Ventas,Femenino,Terciario,8,Tratamiento
+491,Bahia Blanca,Ingenieria,Masculino,Secundario,0,Control
+492,Bahia Blanca,Ingenieria,Masculino,Universitario,0,Control
+493,Mar del Plata,Ingenieria,Femenino,Terciario,11,Control
+494,Mendoza,Ingenieria,Femenino,Secundario,10,Tratamiento
+495,Cordoba,Ingenieria,Masculino,Universitario,8,Control
+496,Rosario,Ingenieria,Femenino,Universitario,10,Tratamiento
+497,Buenos Aires,Ingenieria,Masculino,Terciario,0,Tratamiento
+498,Rosario,Ingenieria,Masculino,Terciario,1,Tratamiento
+499,Bahia Blanca,Ventas,Masculino,Posgrado,3,Control
+500,Rosario,Ventas,Femenino,Universitario,0,Tratamiento
+501,Buenos Aires,Ventas,Masculino,Posgrado,10,Tratamiento
+502,Mendoza,Ingenieria,Femenino,Universitario,0,Tratamiento
+503,Bahia Blanca,Operaciones,Masculino,Posgrado,6,Control
+504,Bahia Blanca,Producto,Femenino,Universitario,10,Control
+505,Cordoba,Ingenieria,Femenino,Terciario,8,Control
+506,Rosario,Ingenieria,Femenino,Posgrado,2,Tratamiento
+507,Mendoza,Ventas,Masculino,Universitario,5,Tratamiento
+508,Cordoba,Ingenieria,Femenino,Terciario,6,Control
+509,Cordoba,Producto,Masculino,Terciario,9,Control
+510,Cordoba,RRHH,Masculino,Universitario,5,Control
+511,Bahia Blanca,Ingenieria,Masculino,Secundario,3,Control
+512,Mar del Plata,Ingenieria,No binario,Terciario,9,Control
+513,Bahia Blanca,RRHH,Masculino,Terciario,10,Control
+514,Mar del Plata,Producto,Masculino,Universitario,5,Control
+515,Bahia Blanca,Ingenieria,Femenino,Universitario,0,Control
+516,Buenos Aires,Operaciones,Masculino,Universitario,6,Tratamiento
+517,Bahia Blanca,Operaciones,Masculino,Terciario,10,Control
+518,Buenos Aires,Producto,Masculino,Secundario,11,Tratamiento
+519,Rosario,Ventas,Masculino,Universitario,4,Tratamiento
+520,Mendoza,Ingenieria,No binario,Universitario,1,Tratamiento
+521,Rosario,Ingenieria,Masculino,Universitario,6,Tratamiento
+522,Buenos Aires,Producto,Masculino,Terciario,9,Tratamiento
+523,Cordoba,Ingenieria,Masculino,Secundario,11,Control
+524,Mar del Plata,Ventas,Femenino,Terciario,0,Control
+525,Cordoba,Operaciones,Femenino,Universitario,3,Control
+526,Cordoba,Ingenieria,Femenino,Universitario,5,Control
+527,Bahia Blanca,Producto,Femenino,Posgrado,1,Control
+528,Buenos Aires,Ingenieria,Femenino,Universitario,10,Tratamiento
+529,Bahia Blanca,Operaciones,Masculino,Universitario,1,Control
+530,Bahia Blanca,Ingenieria,Masculino,Universitario,7,Control
+531,Mendoza,Ventas,Masculino,Secundario,11,Tratamiento
+532,Buenos Aires,Producto,Masculino,Universitario,8,Tratamiento
+533,Buenos Aires,Ingenieria,Femenino,Terciario,9,Tratamiento
+534,Cordoba,Ventas,Femenino,Universitario,3,Control
+535,Mendoza,Ventas,Femenino,Terciario,9,Tratamiento
+536,Buenos Aires,Producto,No binario,Universitario,5,Tratamiento
+537,Rosario,Ventas,Femenino,Posgrado,0,Tratamiento
+538,Buenos Aires,RRHH,Masculino,Secundario,4,Tratamiento
+539,Mendoza,Ingenieria,Masculino,Universitario,4,Tratamiento
+540,Buenos Aires,Producto,No binario,Universitario,6,Tratamiento
+541,Mar del Plata,Ingenieria,Femenino,Terciario,3,Control
+542,Buenos Aires,Ventas,Femenino,Universitario,5,Tratamiento
+543,Cordoba,Producto,Femenino,Universitario,5,Control
+544,Cordoba,Ingenieria,Femenino,Posgrado,3,Control
+545,Mar del Plata,Ingenieria,Femenino,Posgrado,8,Control
+546,Buenos Aires,Operaciones,Masculino,Secundario,3,Tratamiento
+547,Rosario,Ingenieria,Masculino,Universitario,9,Tratamiento
+548,Mendoza,Ventas,Masculino,Universitario,3,Tratamiento
+549,Mendoza,Ingenieria,Masculino,Terciario,10,Tratamiento
+550,Mar del Plata,RRHH,Femenino,Terciario,4,Control
+551,Mar del Plata,Ingenieria,Masculino,Posgrado,0,Control
+552,Rosario,Ingenieria,Masculino,Secundario,1,Tratamiento
+553,Mar del Plata,Operaciones,Masculino,Universitario,9,Control
+554,Cordoba,Operaciones,Masculino,Posgrado,10,Control
+555,Bahia Blanca,Ingenieria,Femenino,Terciario,2,Control
+556,Mendoza,Producto,Femenino,Universitario,7,Tratamiento
+557,Mar del Plata,Ventas,Femenino,Posgrado,6,Control
+558,Bahia Blanca,Operaciones,Masculino,Universitario,1,Control
+559,Mar del Plata,Ingenieria,Masculino,Terciario,5,Control
+560,Bahia Blanca,Producto,Femenino,Secundario,8,Control
+561,Mendoza,Ventas,Masculino,Posgrado,11,Tratamiento
+562,Buenos Aires,Ventas,Masculino,Terciario,10,Tratamiento
+563,Rosario,Ventas,Femenino,Universitario,1,Tratamiento
+564,Cordoba,Producto,Femenino,Secundario,2,Control
+565,Bahia Blanca,Ingenieria,Masculino,Universitario,5,Control
+566,Cordoba,Operaciones,Masculino,Posgrado,1,Control
+567,Cordoba,Operaciones,Masculino,Universitario,6,Control
+568,Cordoba,Ventas,Femenino,Posgrado,0,Control
+569,Mendoza,Ingenieria,Masculino,Terciario,1,Tratamiento
+570,Mendoza,Ingenieria,Femenino,Universitario,0,Tratamiento
+571,Bahia Blanca,Ventas,Masculino,Posgrado,3,Control
+572,Rosario,Ingenieria,Femenino,Universitario,9,Tratamiento
+573,Cordoba,RRHH,Femenino,Terciario,2,Control
+574,Buenos Aires,Ingenieria,Masculino,Posgrado,11,Tratamiento
+575,Buenos Aires,Ventas,Masculino,Universitario,3,Tratamiento
+576,Rosario,Operaciones,Masculino,Universitario,0,Tratamiento
+577,Bahia Blanca,Ingenieria,Masculino,Posgrado,4,Control
+578,Mendoza,Ingenieria,No binario,Terciario,8,Tratamiento
+579,Bahia Blanca,Ventas,Masculino,Terciario,1,Control
+580,Buenos Aires,Producto,Masculino,Secundario,0,Tratamiento
+581,Buenos Aires,Ingenieria,Masculino,Universitario,10,Tratamiento
+582,Bahia Blanca,Ventas,Femenino,Terciario,7,Control
+583,Buenos Aires,RRHH,Masculino,Universitario,4,Tratamiento
+584,Buenos Aires,Producto,Femenino,Terciario,9,Tratamiento
+585,Rosario,Ingenieria,Masculino,Universitario,10,Tratamiento
+586,Bahia Blanca,Ingenieria,Femenino,Terciario,4,Control
+587,Mar del Plata,Ingenieria,No binario,Universitario,6,Control
+588,Buenos Aires,Ingenieria,Masculino,Terciario,0,Tratamiento
+589,Bahia Blanca,Ingenieria,Masculino,Universitario,3,Control
+590,Bahia Blanca,Ventas,Masculino,Universitario,7,Control
+591,Mar del Plata,Ingenieria,Femenino,Universitario,2,Control
+592,Bahia Blanca,RRHH,Masculino,Posgrado,11,Control
+593,Cordoba,Ingenieria,Masculino,Universitario,11,Control
+594,Bahia Blanca,Ingenieria,Masculino,Terciario,3,Control
+595,Cordoba,Ventas,Masculino,Posgrado,4,Control
+596,Mar del Plata,Operaciones,Masculino,Terciario,2,Control
+597,Mendoza,Ingenieria,Masculino,Secundario,6,Tratamiento
+598,Mar del Plata,Ingenieria,Masculino,Universitario,1,Control
+599,Mendoza,Ingenieria,Femenino,Terciario,4,Tratamiento
+600,Mendoza,Producto,Masculino,Terciario,6,Tratamiento
