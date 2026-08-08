@@ -4,12 +4,17 @@
 > acá. Las notebooks cargan los datos desde una **URL pública estable**; la copia local es
 > para autoría/render.
 >
-> **Nota (2026-08):** este archivo decía "el repo es privado, su raw no sirve para Colab".
-> Verificado contra la API de GitHub (`api.github.com/repos/tomdamelio/analitica_de_datos`
-> devuelve 200, no 404): el repo es público, así que las URLs `raw.githubusercontent.com`
-> sí sirven directo para cargar datos en Colab, sin depender de GitHub Pages ni de un
-> gist aparte. Si esto cambia (el repo pasa a privado), hay que revisar todas las URLs de
-> carga de datos que asuman lo contrario.
+> **Nota (2026-08-05):** este repo **pasó a privado**, así que su `raw.githubusercontent.com`
+> ya no sirve para cargar datos (da 404 sin autenticación). Quedan dos fuentes públicas
+> válidas, y ninguna URL de carga debe apuntar a este repo:
+>
+> - el **espejo público** `tomdamelio/analitica_de_datos_alumnos` vía
+>   `raw.githubusercontent.com` — lo que usan hoy las notebooks (ver `TRAMPAS.md`);
+> - el **sitio publicado**, `https://analiticadedatos-udesa.com/<ruta del archivo>`, para
+>   los archivos declarados en `resources:` de `_quarto.yml`.
+>
+> Una nota anterior afirmaba lo contrario ("el repo es público, el raw sirve directo");
+> quedó desactualizada al migrar el sitio a la VPS y cerrar el repo.
 
 ## `toy-nimbus/` — caso guía de la Clase 1 (people analytics ficticio)
 
@@ -31,7 +36,8 @@ Tres tablas, todas unidas por `empleado_id` (600 empleados, 6 sedes):
 |---|---|
 | Licencia | dataset propio, sintético — sin restricciones de uso |
 | Generado | 2026-08 (regenerar con `python data/generar_toy_nimbus.py`) |
-| **URL de carga en notebooks** | `https://raw.githubusercontent.com/tomdamelio/analitica_de_datos/main/data/toy-nimbus/<archivo>.csv` |
+| **URL de carga en notebooks** | espejo público: `https://raw.githubusercontent.com/tomdamelio/analitica_de_datos_alumnos/main/data/toy-nimbus/<archivo>.csv` |
+| **URL desde el sitio** | `https://analiticadedatos-udesa.com/data/toy-nimbus/<archivo>.csv` — solo `nimbus_empleados.csv` y `nimbus_salario.csv`, que están declarados en `resources:` (`_quarto.yml`) y enlazados desde la página de la Clase 1. `nimbus_bienestar_diario.csv` **no** se publica por esta vía |
 | Se usa en | Clase 1 (fundamentos de Python, piloto de fruta, ejemplo de ajuste no lineal salario~edad) |
 
 **Piloto de fruta (`nimbus_bienestar_diario.csv`).** Randomizado por sede, no por persona:
