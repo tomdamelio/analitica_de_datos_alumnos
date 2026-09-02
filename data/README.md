@@ -27,7 +27,7 @@ la renuncia.
 > docente, 24/08/2026). Antes la espina era `hr_attrition.csv` y Nimbus era exclusivo de la
 > Clase 1. Ver `CONVENTIONS.md` §9.
 
-Cuatro tablas, todas unidas por `empleado_id` (600 empleados, 6 sedes):
+Cinco tablas, todas unidas por `empleado_id` (600 empleados, 6 sedes):
 
 | Archivo | Dimensiones | Contenido |
 |---|---|---|
@@ -35,6 +35,21 @@ Cuatro tablas, todas unidas por `empleado_id` (600 empleados, 6 sedes):
 | `nimbus_bienestar_diario.csv` | 24.000 × 5 | panel diario de bienestar (escala 1-7) durante el piloto, línea de base + intervención |
 | `nimbus_salario.csv` | 1.800 × 4 | panel de salario mensual por empleado y año (2023-2025), ejemplo de ajuste no lineal (edad-salario) |
 | `nimbus_rrhh.csv` | 600 × 5 | **(agregada 24/08/2026 para la Clase 4)** renuncia (Sí/No) + tres señales de comportamiento |
+| `nimbus_clima.csv` | 600 × 20 | **(agregada 01/09/2026 para la Clase 5)** encuesta anual de clima 2026: índice `bienestar_laboral` (0-100) + 19 predictores |
+
+> ⚠️ **Hay dos "bienestar" y NO son lo mismo.** Es deliberado, pero se confunden fácil:
+>
+> | | `nimbus_bienestar_diario.csv` | `nimbus_clima.csv` |
+> |---|---|---|
+> | Qué mide | el piloto de fruta, día a día | encuesta anual de clima |
+> | Escala | Likert 1-7, entero | índice 0-100, un decimal |
+> | Filas | una por empleado y día | una por empleado |
+> | Año | 2025 | 2026 |
+> | ¿Se puede predecir? | **No.** Por diseño depende solo del tratamiento | **Sí**, esa es su razón de ser |
+>
+> El bienestar diario está construido para **inferencia causal**: no correlaciona con ninguna
+> otra variable de Nimbus (con el salario da r = −0,019, R² = 0,0004). Intentar predecirlo con
+> una regresión no da nada, y eso es una propiedad del diseño, no un defecto.
 
 > **Por qué `nimbus_rrhh.csv` es una tabla aparte y no columnas nuevas en
 > `nimbus_empleados.csv`:** la Clase 2 ya está publicada y tiene un ejercicio (celda 37) que
@@ -52,8 +67,105 @@ Cuatro tablas, todas unidas por `empleado_id` (600 empleados, 6 sedes):
 | Licencia | dataset propio, sintético — sin restricciones de uso |
 | Generado | 2026-08 (regenerar con `python data/generar_toy_nimbus.py`) |
 | **URL de carga en notebooks** | espejo público: `https://raw.githubusercontent.com/tomdamelio/analitica_de_datos_alumnos/main/data/toy-nimbus/<archivo>.csv` |
-| **URL desde el sitio** | `https://analiticadedatos-udesa.com/data/toy-nimbus/<archivo>.csv` — `nimbus_empleados.csv`, `nimbus_salario.csv`, `nimbus_bienestar_diario.csv` y `nimbus_rrhh.csv` (esta última agregada a `resources:` el 29/08/2026, al publicar la Clase 4). Los cuatro están declarados en `resources:` (`_quarto.yml`) y enlazados desde la página de la clase que los usa |
-| Se usa en | Clase 1 (fundamentos de Python, piloto de fruta, ajuste no lineal salario~edad), Clase 2 (carga, `merge`, limpieza) y **Clase 4** (aprendizaje supervisado, KNN sobre `nimbus_rrhh.csv`) |
+| **URL desde el sitio** | `https://analiticadedatos-udesa.com/data/toy-nimbus/<archivo>.csv` — `nimbus_empleados.csv`, `nimbus_salario.csv`, `nimbus_bienestar_diario.csv`, `nimbus_rrhh.csv` (agregada el 29/08/2026, al publicar la Clase 4) y `nimbus_clima.csv` (agregada el 02/09/2026, al publicar la Clase 5). Los cinco están declarados en `resources:` (`_quarto.yml`) y enlazados desde la página de la clase que los usa |
+| Se usa en | Clase 1 (fundamentos de Python, piloto de fruta, ajuste no lineal salario~edad), Clase 2 (carga, `merge`, limpieza), Clase 3 (visualización), **Clase 4** (KNN sobre `nimbus_rrhh.csv`) y **Clase 5** (regresión lineal y regularización sobre `nimbus_clima.csv`) |
+
+### `nimbus_clima.csv` — encuesta de clima laboral 2026 (Clase 5)
+
+Agregada el 01/09/2026, tabla aparte y con `Generator` propio (`SEED_CLIMA = 44`), por el
+mismo motivo que `nimbus_rrhh.csv`. **Verificado por hash: los cuatro CSV anteriores no
+cambiaron ni un byte.**
+
+Existe porque el bienestar del piloto de fruta **no se puede predecir** (ver el aviso de
+arriba), y la Clase 5 necesita una variable continua que sí tenga estructura. El salario no
+está en esta tabla sino en `nimbus_salario.csv`: armar el modelo exige un `merge`, que es el
+paso que enseñó la Clase 2.
+
+| Columna | Tipo | Rol en la clase |
+|---|---|---|
+| `empleado_id` | int | clave |
+| `bienestar_laboral` | float (0-100) | **variable objetivo**: media 57,4, sd 11,2, rango 11,4-97,1 |
+| `horas_extra_semana` | float | predictor real, efecto negativo. Tres casos en 38 h: **alto leverage** (el p99 es 18,5) |
+| `apoyo_equipo` | float (1-10) | predictor real, el más fuerte después del salario |
+| `reconocimiento` | float (1-10) | predictor real; **comparte factor latente con `apoyo_equipo`** |
+| `autonomia` | float (1-10) | predictor real, efecto chico |
+| `dias_home_office` | int (0-5) | **efecto no lineal**: óptimo en 3 días, U invertida |
+| `bono_anual_pct` | float | **colineal con el salario** (r = 0,966), sin efecto propio |
+| 12 columnas más | varios | **ruido puro**: coeficiente verdadero exactamente cero |
+
+Las doce de ruido son `reuniones_semana`, `mensajes_chat_dia`, `dias_vacaciones_tomados`,
+`distancia_oficina_km`, `cursos_completados`, `meses_en_el_rol`, `tickets_cerrados_mes`,
+`emails_enviados_dia`, `proyectos_activos`, `dias_licencia_medica`, `horas_capacitacion` y
+`puntualidad_pct`. Son doce y no dos a propósito: con pocas variables de ruido, OLS aguanta
+bien incluso con 40 filas y la regularización se queda sin nada que arreglar.
+
+#### Qué sección sostiene cada pieza (verificado 01/09/2026)
+
+Con el salario expresado **en millones** (rango 0,94-1,52), que es la unidad que deja los
+coeficientes legibles.
+
+| Sección | Evidencia en los datos |
+|---|---|
+| Regresión simple | `bienestar = −31,04 + 70,30 · salario_en_millones`; R² = 0,327, RSE = 9,22, r = 0,572 |
+| Regresión múltiple | salario 0,327 · apoyo 0,160 · reconocimiento 0,076; **juntos 0,522, no 0,563** |
+| Colinealidad | β del bono: **+1,845 solo → +0,010** al agregar el salario |
+| Interacción | β del producto = +0,437. Pendiente de horas extra: **−1,67 con apoyo bajo, −0,26 con apoyo alto** |
+| No linealidad | home office: 0 d → 53,4 · **3 d → 60,9** · 5 d → 53,7 |
+| Varianza no constante | sd de residuos 8,05 vs. 10,29. **Breusch-Pagan p = 8,7·10⁻⁵** sobre el modelo completo |
+| Errores correlacionados | residuo medio por sede: de −2,55 (Córdoba) a +2,78 (Mar del Plata) |
+| Outliers y leverage | 4 residuos con \|z\| > 3; 3 personas con 38 h extra |
+| Inferencia (β significativo) | salario p = 1,8·10⁻⁵³; **ninguna de las 12 de ruido da p < 0,05** |
+| Sobreajuste train/test | 6 variables reales: 0,631/0,586. Con las 19: 0,641/**0,557** |
+| Sobreajuste polinómico | grado 1 test 0,40 · grado 5 test −262 · grado 9 train 0,634 / **test −359.441** |
+| Dos ajustes que se dan vuelta | con `random_state=173` y 25 filas: recta 0,146/**0,289**, curva de grado 4 0,421/**−236,7** |
+
+#### Ridge y lasso, promedio de 3 particiones
+
+| Filas de entrenamiento | OLS | Ridge | Lasso |
+|---|---|---|---|
+| 30 | **−0,018** | 0,333 | 0,380 |
+| 40 | 0,184 | 0,338 | 0,367 |
+| 60 | 0,405 | 0,417 | 0,441 |
+| 100 | 0,497 | 0,502 | 0,530 |
+| 200 | 0,531 | 0,526 | 0,545 |
+
+La ventaja de regularizar **se achica a medida que hay más datos**. Eso también es parte de la
+lección, así que a propósito no se chequea al revés.
+
+#### Regresión lineal vs. KNN (ISLP §3.5)
+
+Partición 70/30, mejor K entre 3 y 80:
+
+| Escenario | Lineal | KNN | Gana |
+|---|---|---|---|
+| 1 predictor, relación lineal (salario) | 0,267 | 0,270 | empatan |
+| 1 predictor, relación no lineal (home office) | 0,003 | 0,056 | **KNN**, por lejos |
+| 19 predictores, 12 de ruido | **0,557** | 0,401 | **Lineal** |
+
+La tercera fila es la maldición de la dimensionalidad, y es el argumento de por qué en la
+práctica se usa regresión lineal. La primera es honesta: cuando la relación es lineal empatan,
+y KNN no da un coeficiente que se pueda interpretar.
+
+#### Cuatro avisos para quien arme la clase
+
+1. **El lasso y la colinealidad.** Como el bono y el salario tienen r = 0,966, el lasso a veces
+   se queda con uno y apaga el otro casi arbitrariamente. No es un bug: es lo que hace el lasso
+   ante predictores colineales, y ridge en cambio los reparte. Conviene decirlo en la diapo de
+   Ridge vs. Lasso en vez de que aparezca de sorpresa.
+2. **La superficie de RSS sobre (β₀, β₁) es un cañón, no un tazón.** Con el salario crudo el
+   valle es 801 veces más largo que ancho, y aun centrado es 120 veces. Para la animación 3D o
+   de contornos hay que **estandarizar el predictor**, o no se ve ningún mínimo. Centrar tiene
+   además un beneficio: β₀ pasa de −31,04 (extrapolación sin sentido, nadie cobra cero) a
+   57,36, que es el bienestar de quien cobra el salario promedio.
+3. **El R² en entrenamiento nunca baja al agregar variables.** Es matemático. Un ejercicio del
+   tipo "agregá variables y mirá si el R² mejora o empeora" solo puede mostrar "empeora" **en
+   testeo**: en entrenamiento la serie es monótona creciente (0,346 → 0,633 agregando diez).
+4. **El embudo de heterocedasticidad es sutil a ojo** (razón 1,28 entre mitades). No se puede
+   hacer más marcado sin romper la escala 0-100 y hundir el R² de la regresión simple, así que
+   para ilustrar el concepto conviene una figura esquemática.
+
+El piloto de fruta de 2025 **no tiene efecto** sobre este índice (p = 0,647), a propósito: si lo
+tuviera, ensuciaría la historia causal de la Clase 1.
 
 ### `nimbus_rrhh.csv` — renuncia y señales de comportamiento (Clase 4)
 
