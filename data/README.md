@@ -27,7 +27,7 @@ la renuncia.
 > docente, 24/08/2026). Antes la espina era `hr_attrition.csv` y Nimbus era exclusivo de la
 > Clase 1. Ver `CONVENTIONS.md` §9.
 
-Cinco tablas, todas unidas por `empleado_id` (600 empleados, 6 sedes):
+Seis tablas, todas unidas por `empleado_id` (600 empleados, 6 sedes):
 
 | Archivo | Dimensiones | Contenido |
 |---|---|---|
@@ -36,6 +36,9 @@ Cinco tablas, todas unidas por `empleado_id` (600 empleados, 6 sedes):
 | `nimbus_salario.csv` | 1.800 × 4 | panel de salario mensual por empleado y año (2023-2025), ejemplo de ajuste no lineal (edad-salario) |
 | `nimbus_rrhh.csv` | 600 × 5 | **(agregada 24/08/2026 para la Clase 4)** renuncia (Sí/No) + tres señales de comportamiento |
 | `nimbus_clima.csv` | 600 × 20 | **(agregada 01/09/2026 para la Clase 5)** encuesta anual de clima 2026: índice `bienestar_laboral` (0-100) + 19 predictores |
+| `nimbus_modalidad.csv` | 600 × 2 | **(agregada 10/09/2026 para la Clase 6)** modalidad de trabajo, presencial o remoto, diseñada para reproducir el *confounding* de ISLP Fig. 4.3 |
+| `nimbus_nivel.csv` | 600 × 2 | **(agregada 11/09/2026 para la Clase 6)** nivel del puesto, junior o senior, diseñada para el *confounding* de ISLP Fig. 4.3. **No es** `antiguedad_anios` |
+| `nimbus_fruta.csv` | 600 × 2 | **(agregada 11/09/2026 para la Clase 6)** promedio de días por semana con fruta en la oficina (0-5, con un decimal), el predictor del repaso de regresión lineal. **No es** el piloto de la Clase 1 |
 
 > ⚠️ **Hay dos "bienestar" y NO son lo mismo.** Es deliberado, pero se confunden fácil:
 >
@@ -68,7 +71,7 @@ Cinco tablas, todas unidas por `empleado_id` (600 empleados, 6 sedes):
 | Generado | 2026-08 (regenerar con `python data/generar_toy_nimbus.py`) |
 | **URL de carga en notebooks** | espejo público: `https://raw.githubusercontent.com/tomdamelio/analitica_de_datos_alumnos/main/data/toy-nimbus/<archivo>.csv` |
 | **URL desde el sitio** | `https://analiticadedatos-udesa.com/data/toy-nimbus/<archivo>.csv` — `nimbus_empleados.csv`, `nimbus_salario.csv`, `nimbus_bienestar_diario.csv`, `nimbus_rrhh.csv` (agregada el 29/08/2026, al publicar la Clase 4) y `nimbus_clima.csv` (agregada el 02/09/2026, al publicar la Clase 5). Los cinco están declarados en `resources:` (`_quarto.yml`) y enlazados desde la página de la clase que los usa |
-| Se usa en | Clase 1 (fundamentos de Python, piloto de fruta, ajuste no lineal salario~edad), Clase 2 (carga, `merge`, limpieza), Clase 3 (visualización), **Clase 4** (KNN sobre `nimbus_rrhh.csv`) y **Clase 5** (regresión lineal y regularización sobre `nimbus_clima.csv`) |
+| Se usa en | Clase 1 (fundamentos de Python, piloto de fruta, ajuste no lineal salario~edad), Clase 2 (carga, `merge`, limpieza), Clase 3 (visualización), **Clase 4** (KNN sobre `nimbus_rrhh.csv`), **Clase 5** (regresión lineal y regularización sobre `nimbus_clima.csv`) y **Clase 6** (regresión logística sobre `nimbus_rrhh.csv`, *confounding* con `nimbus_modalidad.csv`) |
 
 ### `nimbus_clima.csv` — encuesta de clima laboral 2026 (Clase 5)
 
@@ -245,6 +248,119 @@ hay justificación pedagógica para modelar una brecha salarial en un dataset de
 clasificación por variable, regresión/clasificación y clustering usan datos **sintéticos
 generados en el cliente** (no de este dataset) porque no existe una variable de
 renuncia/attrition en `toy-nimbus` — está aclarado en las notas del orador de esas slides.
+
+### `nimbus_modalidad.csv` — modalidad de trabajo (Clase 6)
+
+Agregada el 10/09/2026, tabla aparte y con `Generator` propio (`SEED_MODALIDAD = 45`), por
+el mismo motivo que las dos anteriores. **Verificado por hash: los cinco CSV anteriores no
+cambiaron ni un byte.**
+
+Existe para reproducir con Nimbus el *confounding* que ISLP cuenta con el dataset Default
+(Fig. 4.3: los estudiantes tienen más deuda, por eso en promedio caen más en default, pero a
+igual deuda caen menos). Pedido del docente: el ejemplo del libro pero con datos propios.
+
+| Columna | Tipo | Rol en la clase |
+|---|---|---|
+| `empleado_id` | int | clave |
+| `modalidad` | `presencial` / `remoto` (37,7% remoto) | el predictor cualitativo que se da vuelta |
+
+**La estructura causal, que es el material de la slide:** los remotos prenden **menos** la
+cámara (fatiga de videollamadas), y por eso, en promedio, **renuncian más**. Pero a **igual**
+cámara, un remoto renuncia **menos** (la flexibilidad retiene). Como `renuncia` y
+`minutos_camara_weekly` ya estaban fijos, la modalidad se sortea condicionada a las dos.
+
+| | Presencial | Remoto |
+|---|---|---|
+| Minutos de cámara (media) | 35,3 | 29,7 |
+| Renuncia | 12,8% | 23,9% |
+
+| Modelo | β de remoto | p |
+|---|---|---|
+| `renuncia ~ modalidad` | **+0,76** | 0,0006 |
+| `renuncia ~ modalidad + minutos_camara` | **−1,14** | 0,0013 |
+
+Es la Tabla 4.2 contra la Tabla 4.3 de ISLP, con Nimbus. Verificado el 10/09/2026 sobre las
+600 filas (`verificar_modalidad()` en el generador lo exige en cada corrida).
+
+### `nimbus_nivel.csv` — nivel del puesto (Clase 6)
+
+Agregada el 11/09/2026, tabla aparte y con `Generator` propio (`SEED_NIVEL = 47`). **Verificado
+por hash: los CSV anteriores no cambiaron ni un byte.**
+
+> ⚠️ **No confundir con `antiguedad_anios`** (en `nimbus_empleados.csv`). Eso son **años en la
+> empresa**; esto es la **banda del puesto**. Se puede entrar como senior con un año de
+> antigüedad.
+
+| Columna | Tipo | Rol en la clase |
+|---|---|---|
+| `empleado_id` | int | clave |
+| `nivel` | `junior` / `senior` (49,8 % juniors) | el predictor cualitativo que se da vuelta |
+
+Reemplaza a `nimbus_modalidad.csv` como ejemplo de *confounding*: el docente descartó el par
+modalidad/cámara el 11/09/2026 por poco creíble. La historia nueva es la del estudiante y la
+tarjeta de ISLP, en lenguaje de RRHH: **los juniors ganan menos**, **cobrar poco predice
+renunciar**, y por eso **en bruto los juniors renuncian más**. Pero **a igual salario el que se
+va es el senior**, porque un senior que cobra lo que un junior está subpagado para su nivel.
+
+Como `renuncia` y `salario_mensual` ya estaban fijos, el nivel se sortea condicionado a los dos.
+
+| | Senior | Junior |
+|---|---|---|
+| Salario medio | 1,32 M | 1,20 M |
+| Renuncia | 12,6 % | 21,4 % |
+
+| Modelo | β de junior | p |
+|---|---|---|
+| `renuncia ~ nivel` | **+0,63** | 0,005 |
+| `renuncia ~ nivel + salario` | **−1,34** | 0,0001 |
+
+Es la Tabla 4.2 contra la Tabla 4.3 de ISLP, con Nimbus. `verificar_nivel()` lo exige en cada
+corrida del generador.
+
+**`nimbus_modalidad.csv` queda huérfana:** sigue en `data/` y documentada, pero desde el
+11/09/2026 ninguna clase la lee.
+
+### `nimbus_fruta.csv` — promedio de días con fruta en la oficina (Clase 6)
+
+Agregada el 11/09/2026, tabla aparte y con `Generator` propio (`SEED_FRUTA = 46`), por el
+mismo motivo que las tres anteriores. **Verificado por hash: los seis CSV anteriores no
+cambiaron ni un byte.**
+
+> ⚠️ **Hay dos "fruta" y NO son lo mismo.** `grupo_fruta` (en `nimbus_empleados.csv`) es el
+> **piloto aleatorizado** de la Clase 1: binario, control contra tratamiento, pensado para
+> inferencia causal. `dias_fruta_semana` (acá) es un **conteo observacional** de 2026, de la
+> misma ventana que la encuesta de clima, promediado sobre un trimestre (de ahí el decimal). En la Clase 6 aparecen los dos: este en el repaso
+> de regresión lineal, y `grupo_fruta` como predictor *dummy* de la logística.
+
+| Columna | Tipo | Rol en la clase |
+|---|---|---|
+| `empleado_id` | int | clave |
+| `dias_fruta_semana` | float 0-5, un decimal (media 2,49; 28 empleados en 0 exacto) | el predictor del repaso de regresión lineal |
+
+Existe por un motivo didáctico puntual, pedido por el docente el 11/09/2026: que el
+**intercepto signifique algo**. Hasta ese día el repaso era `bienestar ~ salario`, y ahí β₀
+es "el bienestar de alguien que cobra cero", que da **−31** en una escala de 0 a 100 y no
+describe a nadie. Con los días de fruta el cero **existe** (31 empleados) y β₀ se lee
+directo. De yapa, la extrapolación se pasa de 100 (la recta cruza el techo recién en 9,2
+días por semana, que no existe), que es el problema con el que abre el bloque siguiente de
+la clase: una recta no respeta un rango.
+
+Se sortea **condicionado** al `bienestar_laboral` que ya estaba fijo en `nimbus_clima.csv`
+(una normal centrada en el bienestar del empleado, recortada a [0, 5]), así la relación
+existe sin tocar una fila de las tablas anteriores. El recorte en 0 es el que deja gente en
+el cero exacto, que es lo que hace que el intercepto describa a alguien. **En clase se presenta como asociación,
+no como efecto causal**: el experimento es el de la Clase 1, este es una encuesta.
+
+| | Valor |
+|---|---|
+| β₀ (intercepto) | **41,60** · bienestar de quien nunca tiene fruta |
+| β₁ (por día) | **+6,34** |
+| R² | 0,567 |
+| p de los dos coeficientes | < 0,001 |
+
+Verificado el 11/09/2026 sobre las 600 filas (`verificar_fruta()` en el generador lo exige en
+cada corrida).
+
 
 ## `student_dropout.csv` — deserción y éxito académico (Clase 10)
 
