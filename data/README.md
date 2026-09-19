@@ -27,7 +27,8 @@ la renuncia.
 > docente, 24/08/2026). Antes la espina era `hr_attrition.csv` y Nimbus era exclusivo de la
 > Clase 1. Ver `CONVENTIONS.md` §9.
 
-Seis tablas, todas unidas por `empleado_id` (600 empleados, 6 sedes):
+Nueve tablas. Ocho se unen por `empleado_id` (600 empleados, 6 sedes); la novena,
+`nimbus_soporte_diario.csv`, es una **serie diaria de la empresa** y se une por `fecha`:
 
 | Archivo | Dimensiones | Contenido |
 |---|---|---|
@@ -39,6 +40,7 @@ Seis tablas, todas unidas por `empleado_id` (600 empleados, 6 sedes):
 | `nimbus_modalidad.csv` | 600 × 2 | **(agregada 10/09/2026 para la Clase 6)** modalidad de trabajo, presencial o remoto, diseñada para reproducir el *confounding* de ISLP Fig. 4.3 |
 | `nimbus_nivel.csv` | 600 × 2 | **(agregada 11/09/2026 para la Clase 6)** nivel del puesto, junior o senior, diseñada para el *confounding* de ISLP Fig. 4.3. **No es** `antiguedad_anios` |
 | `nimbus_fruta.csv` | 600 × 2 | **(agregada 11/09/2026 para la Clase 6)** promedio de días por semana con fruta en la oficina (0-5, con un decimal), el predictor del repaso de regresión lineal. **No es** el piloto de la Clase 1 |
+| `nimbus_soporte_diario.csv` | 1.096 × 5 | **(agregada 17/09/2026 para la Clase 7)** tres años de tickets diarios de la mesa de ayuda, con tendencia, dos estacionalidades semanales opuestas, estacionalidad anual, feriados y un incidente. **No tiene `empleado_id`**: es una serie de la empresa, no del empleado |
 
 > ⚠️ **Hay dos "bienestar" y NO son lo mismo.** Es deliberado, pero se confunden fácil:
 >
@@ -360,6 +362,65 @@ no como efecto causal**: el experimento es el de la Clase 1, este es una encuest
 
 Verificado el 11/09/2026 sobre las 600 filas (`verificar_fruta()` en el generador lo exige en
 cada corrida).
+
+### `nimbus_soporte_diario.csv` — tickets diarios de la mesa de ayuda (Clase 7)
+
+Agregada el 17/09/2026, tabla aparte y con `Generator` propio (`SEED_SOPORTE = 48`), por el
+mismo motivo que las anteriores. **Verificado por hash: los ocho CSV anteriores no cambiaron
+ni un byte.**
+
+Existe porque el docente pidió dar series temporales **sin salir de Nimbus** (17/09/2026). La
+alternativa era un dataset externo real (bicicletas compartidas de Washington DC, UCI, CC BY
+4.0), que se descartó para no romper la continuidad del caso.
+
+> ⚠️ **Hay dos series diarias de Nimbus y NO son lo mismo.** `nimbus_bienestar_diario.csv` es
+> el panel del piloto de fruta: 40 días hábiles, Likert 1-7, **sin tendencia ni
+> estacionalidad por diseño** (sirve para inferencia causal, no se puede pronosticar).
+> `nimbus_soporte_diario.csv` es lo contrario: tres años de conteos diarios **con** toda la
+> estructura temporal. Es la única tabla de Nimbus que se puede descomponer.
+
+| Columna | Tipo | Rol en la clase |
+|---|---|---|
+| `fecha` | date, diaria y continua, 01/01/2023 a 31/12/2025 (1.096 días) | el índice de la serie |
+| `tickets_empresas` | int | **la serie protagonista**: clientes corporativos, pico de lunes a viernes |
+| `tickets_particulares` | int | usuarios individuales, el ritmo opuesto: pico el fin de semana |
+| `tickets` | int | la suma de las dos |
+| `feriado` | 0/1 | feriado nacional argentino de fecha fija |
+
+**Lo que tiene adentro, y para qué está cada cosa** (todo verificado el 17/09/2026; los
+asserts de `verificar_soporte_diario()` lo exigen en cada corrida):
+
+| Estructura | Número | Para qué |
+|---|---|---|
+| Tendencia | 107 → 145 tickets/día (empresas), 215 → 294 (total) de 2023 a 2025 | que la serie crezca, y que un modelo sin tendencia falle al extrapolar |
+| Estacionalidad semanal, empresas | lunes 176 · domingo 28 (fin de semana = **0,21×** el día hábil) | es lo que hace ganar al naive estacional |
+| Estacionalidad semanal, particulares | domingo 242 · miércoles 76 (fin de semana = **2,72×**) | el ritmo opuesto |
+| Estacionalidad semanal del **total** | entre 241 y 270: **swing de 11%** | **el punto de la clase**: dos ritmos opuestos de tamaño parecido casi se cancelan. La serie agregada parece no tener patrón semanal y en realidad tiene dos. Agregar borró el comportamiento |
+| Estacionalidad anual | empresas: enero 93, agosto 160 | enero es vacaciones en Argentina |
+| Feriados | caen al 35% si son día hábil; dejan un resto medio de **−104** | la descomposición no maneja sola los efectos de calendario (FPP3 §3.6) |
+| Incidente del 14/08/2024 | pico de ×3,2, resto de **+398** (el más grande de la serie) | el outlier que justifica STL robusto, y que muestra que el resto no es basura: es donde quedan las noticias |
+
+**Descomposición STL** (`period=7`, `robust=True`) sobre `tickets_empresas`: fuerza estacional
+**0,869**, tendencia de 78 a 129. Los cinco restos más grandes son el incidente (dos días) y
+tres feriados.
+
+**Comparación de métodos de referencia** (entrenar hasta el 30/09/2025, pronosticar los 31
+días de octubre de 2025), sobre `tickets_empresas`:
+
+| Método | MAE | RMSE | MAPE | MASE |
+|---|---|---|---|---|
+| Media | 73,4 | 75,8 | 83,3% | 1,43 |
+| Naive | 64,9 | 94,4 | 130,3% | 1,26 |
+| Drift | 68,0 | 96,7 | 133,5% | 1,32 |
+| **Naive estacional (m = 7)** | **17,3** | **22,0** | **12,8%** | **0,34** |
+
+Y el giro que cierra el círculo con la estructura: **sobre el total, el naive estacional
+pierde** (MAE 26,5) contra el naive simple (14,2), justamente porque el total casi no tiene
+estacionalidad semanal. El método que gana depende de la estructura que la serie tiene, y esa
+estructura se vio al descomponerla.
+
+De yapa, el MAPE del naive (130%) es la demostración de su propia trampa: los domingos tienen
+pocos tickets, el denominador se achica y el porcentaje explota.
 
 
 ## `student_dropout.csv` — deserción y éxito académico (Clase 10)
