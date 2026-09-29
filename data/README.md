@@ -27,7 +27,7 @@ la renuncia.
 > docente, 24/08/2026). Antes la espina era `hr_attrition.csv` y Nimbus era exclusivo de la
 > Clase 1. Ver `CONVENTIONS.md` §9.
 
-Nueve tablas. Ocho se unen por `empleado_id` (600 empleados, 6 sedes); la novena,
+Diez tablas. Nueve se unen por `empleado_id` (600 empleados, 6 sedes); la restante,
 `nimbus_soporte_diario.csv`, es una **serie diaria de la empresa** y se une por `fecha`:
 
 | Archivo | Dimensiones | Contenido |
@@ -41,6 +41,7 @@ Nueve tablas. Ocho se unen por `empleado_id` (600 empleados, 6 sedes); la novena
 | `nimbus_nivel.csv` | 600 × 2 | **(agregada 11/09/2026 para la Clase 6)** nivel del puesto, junior o senior, diseñada para el *confounding* de ISLP Fig. 4.3. **No es** `antiguedad_anios` |
 | `nimbus_fruta.csv` | 600 × 2 | **(agregada 11/09/2026 para la Clase 6)** promedio de días por semana con fruta en la oficina (0-5, con un decimal), el predictor del repaso de regresión lineal. **No es** el piloto de la Clase 1 |
 | `nimbus_soporte_diario.csv` | 1.096 × 5 | **(agregada 17/09/2026 para la Clase 7)** tres años de tickets diarios de la mesa de ayuda, con tendencia, dos estacionalidades semanales opuestas, estacionalidad anual, feriados y un incidente. **No tiene `empleado_id`**: es una serie de la empresa, no del empleado |
+| `nimbus_desempeno.csv` | 600 × 12 | **(agregada 28/09/2026 para la Clase 9)** once indicadores de desempeño con dos factores latentes (cumplimiento y colaboración) en escalas mezcladas; el cumplimiento cae en quien renuncia |
 
 > ⚠️ **Hay dos "bienestar" y NO son lo mismo.** Es deliberado, pero se confunden fácil:
 >
@@ -72,8 +73,8 @@ Nueve tablas. Ocho se unen por `empleado_id` (600 empleados, 6 sedes); la novena
 | Licencia | dataset propio, sintético — sin restricciones de uso |
 | Generado | 2026-08 (regenerar con `python data/generar_toy_nimbus.py`) |
 | **URL de carga en notebooks** | espejo público: `https://raw.githubusercontent.com/tomdamelio/analitica_de_datos_alumnos/main/data/toy-nimbus/<archivo>.csv` |
-| **URL desde el sitio** | `https://analiticadedatos-udesa.com/data/toy-nimbus/<archivo>.csv` — `nimbus_empleados.csv`, `nimbus_salario.csv`, `nimbus_bienestar_diario.csv`, `nimbus_rrhh.csv` (agregada el 29/08/2026, al publicar la Clase 4) y `nimbus_clima.csv` (agregada el 02/09/2026, al publicar la Clase 5). Los cinco están declarados en `resources:` (`_quarto.yml`) y enlazados desde la página de la clase que los usa |
-| Se usa en | Clase 1 (fundamentos de Python, piloto de fruta, ajuste no lineal salario~edad), Clase 2 (carga, `merge`, limpieza), Clase 3 (visualización), **Clase 4** (KNN sobre `nimbus_rrhh.csv`), **Clase 5** (regresión lineal y regularización sobre `nimbus_clima.csv`) y **Clase 6** (regresión logística sobre `nimbus_rrhh.csv`, *confounding* con `nimbus_modalidad.csv`) |
+| **URL desde el sitio** | `https://analiticadedatos-udesa.com/data/toy-nimbus/<archivo>.csv` — `nimbus_empleados.csv`, `nimbus_salario.csv`, `nimbus_bienestar_diario.csv`, `nimbus_rrhh.csv` (agregada el 29/08/2026, al publicar la Clase 4), `nimbus_clima.csv` (agregada el 02/09/2026, al publicar la Clase 5), `nimbus_soporte_diario.csv` (Clase 7) y `nimbus_desempeno.csv` (agregada el 29/09/2026, al publicar la Clase 9). Todos están declarados en `resources:` (`_quarto.yml`) y enlazados desde la página de la clase que los usa |
+| Se usa en | Clase 1 (fundamentos de Python, piloto de fruta, ajuste no lineal salario~edad), Clase 2 (carga, `merge`, limpieza), Clase 3 (visualización), **Clase 4** (KNN sobre `nimbus_rrhh.csv`), **Clase 5** (regresión lineal y regularización sobre `nimbus_clima.csv`), **Clase 6** (regresión logística sobre `nimbus_rrhh.csv`, *confounding* con `nimbus_modalidad.csv`), **Clase 7** (series temporales sobre `nimbus_soporte_diario.csv`), **Clase 8** (árboles y random forest sobre `nimbus_rrhh.csv`) y **Clase 9** (PCA sobre `nimbus_desempeno.csv`) |
 
 ### `nimbus_clima.csv` — encuesta de clima laboral 2026 (Clase 5)
 
@@ -248,8 +249,9 @@ hay justificación pedagógica para modelar una brecha salarial en un dataset de
 
 **Ilustrativo, no real:** las slides de la Clase 1 sobre % de renuncia vs. salario, accuracy de
 clasificación por variable, regresión/clasificación y clustering usan datos **sintéticos
-generados en el cliente** (no de este dataset) porque no existe una variable de
-renuncia/attrition en `toy-nimbus` — está aclarado en las notas del orador de esas slides.
+generados en el cliente** (no de este dataset) porque cuando se armó la Clase 1 no existía una
+variable de renuncia en `toy-nimbus` (hoy sí: `nimbus_rrhh.csv`, agregada para la Clase 4) —
+está aclarado en las notas del orador de esas slides.
 
 ### `nimbus_modalidad.csv` — modalidad de trabajo (Clase 6)
 
@@ -423,6 +425,42 @@ De yapa, el MAPE del naive (130%) es la demostración de su propia trampa: los d
 pocos tickets, el denominador se achica y el porcentaje explota.
 
 
+### `nimbus_desempeno.csv` — indicadores de desempeño (Clase 9)
+
+Once indicadores por empleado que RRHH junta de distintos sistemas. Existen para la clase de
+PCA: un set grande de variables de desempeño que se reduce a **una** métrica, y esa métrica
+predice la renuncia, lo que empalma PCA con el aprendizaje supervisado de las clases 4–8.
+
+| Factor latente | Indicadores (escala) |
+|---|---|
+| **Cumplimiento** (cae en quien renuncia; sube un poco con la antigüedad) | `objetivos_cumplidos_pct` (0-100), `entregas_a_tiempo_pct` (0-100), `tareas_cerradas_mes` (conteo), `horas_foco_semana` (horas), `evaluacion_lider` (1-5), `okr_score` (0-1), `retrabajos_mes` (conteo, **carga negativa**) |
+| **Colaboración** (no depende de la renuncia; sube un poco con la antigüedad) | `evaluacion_pares` (1-5), `minutos_mentoria_mes` (minutos, desvío ~83), `revisiones_a_otros_mes` (conteo), `iniciativas_internas_anio` (conteo) |
+
+Relato causal, coherente con `nimbus_rrhh.csv`: el cumplimiento es un **síntoma** del
+desenganche, como las faltas y la cámara. Predice la renuncia, no la explica. Como `renuncia`
+ya estaba fija, el factor se genera condicionado a ella (semilla propia, `SEED_DESEMPENO = 49`).
+Las medidas acotadas (porcentajes, notas 1-5, OKR 0-1) se llevan a su escala con una curva
+logística y no con un recorte: así se comprimen de a poco cerca del techo, como un porcentaje real,
+en vez de apilarse en 100 % (cambio del 28/09/2026, pedido al ver la nube en la slide de PC1).
+
+**Efectos verificados** (28/09/2026; los asserts de `verificar_desempeno()` los exigen en cada
+corrida). PCA sobre los indicadores estandarizados:
+
+| Qué | Valor | Qué sostiene en la clase |
+|---|---|---|
+| PVE de PC1 / PC2 / PC3 | **40,4% / 21,7% / 5,8%** | dos componentes interpretables y un codo claro en la tercera |
+| Cargas de PC1 | 0,33-0,41 en los siete de cumplimiento (retrabajos con signo opuesto), ≤ 0,04 en colaboración | PC1 = índice de cumplimiento |
+| Cargas de PC2 | 0,46-0,52 en los cuatro de colaboración, ≤ 0,04 en cumplimiento | PC2 = colaboración |
+| PCA **sin** estandarizar | PC1 explica el 94,6% y es `minutos_mentoria_mes` sola | el contraejemplo de no escalar |
+| AUC de renuncia (logística, CV 5×10) | 11 indicadores **0,828**; PC1 sola **0,832**; 2-11 componentes 0,828-0,831; PC1 sin escalar **0,464**; PC2 sola 0,506 | una sola componente comprime once variables sin perder poder predictivo; elegir `n_components` por CV da una meseta desde 1 |
+| Correlación de PC1 con `nimbus_rrhh` | faltas −0,18, weeklys perdidas −0,31, minutos de cámara +0,30; antigüedad +0,21 | es otro síntoma del mismo desenganche |
+
+> **Aviso para quien arme la clase:** que PC1 prediga la renuncia es una **propiedad de estos
+> datos**, no de PCA. PCA no mira `y`: la componente de más varianza podría no tener nada que
+> ver con el objetivo (ISLP §6.3.1). En Nimbus coincide porque el factor dominante es,
+> por diseño, el que cae antes de renunciar.
+
+
 ## `student_dropout.csv` — deserción y éxito académico (Clase 10)
 
 **Predict Students' Dropout and Academic Success** — dataset real de una institución de
@@ -438,9 +476,9 @@ educación superior (Portugal), recopilado por Realinho, Vieira Martins, Machado
 | **URL de carga en notebooks** | `https://archive.ics.uci.edu/static/public/697/predict+students+dropout+and+academic+success.zip` (archivo `data.csv`, separador `;`) |
 | Licencia | **CC BY 4.0** (permite uso y redistribución con atribución) |
 | Descargado | 2026-07-19 |
-| Se usa en | Clase 10 (PCA: motivación, intuición 2D/3D, biplot, escalado, scree) |
+| Se usa en | **Ninguna clase publicada.** Se usaba en la vieja clase de PCA, archivada el 28/09/2026 en `clases/_archivo/clase-10-pca-uci/`; la Clase 9 (PCA) usa ahora `nimbus_desempeno.csv` |
 
-**Uso pedagógico en la Clase 10.** Es la base de datos que acompaña toda la explicación de
+**Uso pedagógico en la vieja Clase 10 (archivada).** Es la base de datos que acompaña toda la explicación de
 PCA. Sobre su bloque de variables académicas numéricas (materias inscriptas/aprobadas y notas
 por semestre, nota de admisión, edad), PC1 explica ~54% de la varianza y separa nítidamente a
 quienes desertan de quienes se gradúan: la primera componente resulta ser un eje de riesgo
