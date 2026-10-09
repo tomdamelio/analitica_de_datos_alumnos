@@ -27,7 +27,7 @@ la renuncia.
 > docente, 24/08/2026). Antes la espina era `hr_attrition.csv` y Nimbus era exclusivo de la
 > Clase 1. Ver `CONVENTIONS.md` §9.
 
-Diez tablas. Nueve se unen por `empleado_id` (600 empleados, 6 sedes); la restante,
+Once tablas. Diez se unen por `empleado_id` (600 empleados, 6 sedes); la restante,
 `nimbus_soporte_diario.csv`, es una **serie diaria de la empresa** y se une por `fecha`:
 
 | Archivo | Dimensiones | Contenido |
@@ -42,6 +42,7 @@ Diez tablas. Nueve se unen por `empleado_id` (600 empleados, 6 sedes); la restan
 | `nimbus_fruta.csv` | 600 × 2 | **(agregada 11/09/2026 para la Clase 6)** promedio de días por semana con fruta en la oficina (0-5, con un decimal), el predictor del repaso de regresión lineal. **No es** el piloto de la Clase 1 |
 | `nimbus_soporte_diario.csv` | 1.096 × 5 | **(agregada 17/09/2026 para la Clase 7)** tres años de tickets diarios de la mesa de ayuda, con tendencia, dos estacionalidades semanales opuestas, estacionalidad anual, feriados y un incidente. **No tiene `empleado_id`**: es una serie de la empresa, no del empleado |
 | `nimbus_desempeno.csv` | 600 × 12 | **(agregada 28/09/2026 para la Clase 9)** once indicadores de desempeño con dos factores latentes (cumplimiento y colaboración) en escalas mezcladas; el cumplimiento cae en quien renuncia |
+| `nimbus_patrones.csv` | 600 × 10 | **(agregada 05/10/2026 para la Clase 10)** patrones de trabajo: seis métricas de huella digital y tres ítems de encuesta, con cuatro perfiles latentes (carga × enganche) que se cruzan con la renuncia |
 
 > ⚠️ **Hay dos "bienestar" y NO son lo mismo.** Es deliberado, pero se confunden fácil:
 >
@@ -74,7 +75,7 @@ Diez tablas. Nueve se unen por `empleado_id` (600 empleados, 6 sedes); la restan
 | Generado | 2026-08 (regenerar con `python data/generar_toy_nimbus.py`) |
 | **URL de carga en notebooks** | espejo público: `https://raw.githubusercontent.com/tomdamelio/analitica_de_datos_alumnos/main/data/toy-nimbus/<archivo>.csv` |
 | **URL desde el sitio** | `https://analiticadedatos-udesa.com/data/toy-nimbus/<archivo>.csv` — `nimbus_empleados.csv`, `nimbus_salario.csv`, `nimbus_bienestar_diario.csv`, `nimbus_rrhh.csv` (agregada el 29/08/2026, al publicar la Clase 4), `nimbus_clima.csv` (agregada el 02/09/2026, al publicar la Clase 5), `nimbus_soporte_diario.csv` (Clase 7) y `nimbus_desempeno.csv` (agregada el 29/09/2026, al publicar la Clase 9). Todos están declarados en `resources:` (`_quarto.yml`) y enlazados desde la página de la clase que los usa |
-| Se usa en | Clase 1 (fundamentos de Python, piloto de fruta, ajuste no lineal salario~edad), Clase 2 (carga, `merge`, limpieza), Clase 3 (visualización), **Clase 4** (KNN sobre `nimbus_rrhh.csv`), **Clase 5** (regresión lineal y regularización sobre `nimbus_clima.csv`), **Clase 6** (regresión logística sobre `nimbus_rrhh.csv`, *confounding* con `nimbus_modalidad.csv`), **Clase 7** (series temporales sobre `nimbus_soporte_diario.csv`), **Clase 8** (árboles y random forest sobre `nimbus_rrhh.csv`) y **Clase 9** (PCA sobre `nimbus_desempeno.csv`) |
+| Se usa en | Clase 1 (fundamentos de Python, piloto de fruta, ajuste no lineal salario~edad), Clase 2 (carga, `merge`, limpieza), Clase 3 (visualización), **Clase 4** (KNN sobre `nimbus_rrhh.csv`), **Clase 5** (regresión lineal y regularización sobre `nimbus_clima.csv`), **Clase 6** (regresión logística sobre `nimbus_rrhh.csv`, *confounding* con `nimbus_modalidad.csv`), **Clase 7** (series temporales sobre `nimbus_soporte_diario.csv`), **Clase 8** (árboles y random forest sobre `nimbus_rrhh.csv`), **Clase 9** (PCA sobre `nimbus_desempeno.csv`) y **Clase 10** (clustering sobre `nimbus_patrones.csv`, en preparación) |
 
 ### `nimbus_clima.csv` — encuesta de clima laboral 2026 (Clase 5)
 
@@ -459,6 +460,73 @@ corrida). PCA sobre los indicadores estandarizados:
 > datos**, no de PCA. PCA no mira `y`: la componente de más varianza podría no tener nada que
 > ver con el objetivo (ISLP §6.3.1). En Nimbus coincide porque el factor dominante es,
 > por diseño, el que cae antes de renunciar.
+
+
+### `nimbus_patrones.csv` — patrones de trabajo (Clase 10)
+
+Agregada el 05/10/2026, tabla aparte y con `Generator` propio (`SEED_PATRONES = 50`). **Verificado
+por hash: los diez CSV anteriores no cambiaron ni un byte.**
+
+Existe porque ninguna tabla anterior de Nimbus tiene grupos: con K-means sobre desempeño, señales
+de RRHH, clima o edad–salario, el silhouette da entre 0,13 y 0,43, siempre máximo en K=2 y
+decreciente después. Son nubes de una sola pieza. Pedido del docente: datos donde el clustering
+encuentre **perfiles de empleados con sentido**.
+
+Hay cuatro perfiles latentes en un 2×2 de **carga × enganche**. **El perfil no está en el CSV**:
+es lo que el alumno tiene que descubrir. Vive solo dentro del generador, para los asserts.
+
+| Perfil | Firma | Renuncia |
+|---|---|---|
+| Comprometidos | muchas horas, mucho compromiso, red de contactos amplia | ~5 % |
+| Quemados | más horas todavía, horas fuera de horario, mucho agotamiento | ~28 % |
+| Desenganchados | pocas horas, poco compromiso, pocos mensajes y contactos | ~31 % |
+| Nuevos | pocas horas, mucho compromiso, **mucha capacitación**; antigüedad ≤ 2 años | ~7 % |
+
+El perfil se sortea **condicionado a la `renuncia`** de `nimbus_rrhh.csv` (ya fija) y a la
+antigüedad, igual que `nimbus_desempeno`. **La renuncia no entra al clustering**: se cruza
+después, como validación externa.
+
+| Columna | Fuente | Rol en la clase |
+|---|---|---|
+| `empleado_id` | — | clave |
+| `horas_semana` | huella | **eje del plano ancla** (carga) |
+| `indice_compromiso` | encuesta, 0-100 | **eje del plano ancla** (enganche) |
+| `horas_fuera_horario_semana` | huella | marca a los Quemados |
+| `minutos_reunion_semana` | huella | **en minutos a propósito**: sin estandarizar se come la distancia |
+| `mensajes_dia` | huella | bajo en Desenganchados |
+| `contactos_distintos_mes` | huella | alto en Comprometidos; bajo en Nuevos, que todavía arman su red |
+| `horas_capacitacion_mes` | huella | lo que distingue a los Nuevos |
+| `agotamiento` | encuesta, 1-7 | alto en Quemados |
+| `recomendaria_0a10` | encuesta, entero (tipo eNPS) | bajo en Quemados y Desenganchados |
+
+**La estructura es anidada a propósito.** En el plano ancla, la brecha de compromiso entre
+{Comprometidos, Nuevos} y {Quemados, Desenganchados} es mayor que la de horas dentro de cada par.
+Por eso K=2 da "enganchados contra no enganchados" y K=4 da los perfiles, y el dendrograma tiene
+una jerarquía real.
+
+**Efectos verificados** (05/10/2026; los asserts de `verificar_patrones()` los exigen en cada
+corrida). K-means con `n_init=10` y `random_state=50`:
+
+| Qué | Valor | Qué sostiene en la clase |
+|---|---|---|
+| Plano ancla estandarizado, silhouette K=2..8 | 0,448 · 0,545 · **0,558** · 0,477 · 0,426 · 0,374 · 0,358 | K=2/3/4 sobre el mismo plano; el máximo en K=4 |
+| Plano ancla, ARI de K=4 contra el perfil latente | **0,908** | separable, pero con solapamiento creíble |
+| Mínimos locales (`init="random"`, `n_init=1`, semillas 0-49) | óptimo W = 187,2 en 46 semillas; **W ≈ 308,5 en las semillas 0, 2, 32 y 36** (parten un grupo de abajo y juntan los dos de arriba) | la animación de semillas (ISLP Fig. 12.8) |
+| Las 9 variables estandarizadas, silhouette K=3 / K=4 | 0,367 / **0,370**; ARI de K=4 0,991 | en p dimensiones K=4 gana por poco: el codo es más claro que el silhouette |
+| Sin estandarizar | ARI **0,068**; los clusters son niveles de `minutos_reunion_semana` (128 · 438 · 723 · 1.065 min; η² = 0,906) | la trampa de escala (ISLP Fig. 12.15) |
+| Renuncia por cluster (K=4, 9 variables) | 5,4 % · 7,3 % · **28,2 %** · **31,2 %** (contra 17,0 % general) | validación externa, empalma con el supervisado |
+| Antigüedad media del cluster con más capacitación | 0,99 años | los Nuevos se reconocen sin etiqueta |
+| Ward cortado en 2, contra enganchados/no enganchados | ARI **0,993** | el dendrograma: el primer corte es el enganche |
+| Single linkage cortado en 2 | 599 + 1 | el encadenamiento, para comparar linkages |
+| Perfil × `area` | Cramér's V = 0,081 | el área (el "género musical" que asigna RRHH) no captura los perfiles |
+
+> **Aviso para quien arme la clase:** en las 9 variables, el silhouette de K=3 y el de K=4
+> quedan casi empatados (0,367 contra 0,370). El codo de W sí marca K=4 claramente. No es un
+> defecto: elegir K es ambiguo en datos realistas (ISLP §12.4.3), pero conviene saberlo antes
+> de afirmar en una slide que "el silhouette elige 4".
+
+> **Nota de entorno (05/10/2026):** el generador necesita `scikit-learn` y `statsmodels`
+> (`requirements.txt`). Correrlo con el `.venv` del repo.
 
 
 ## `student_dropout.csv` — deserción y éxito académico (Clase 10)
