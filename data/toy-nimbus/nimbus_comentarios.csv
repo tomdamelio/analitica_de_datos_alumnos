@@ -1,0 +1,601 @@
+empleado_id,comentario
+1,"La verdad, tengo la agenda llena de reuniones."
+2,"sinceramente, falta liderazgo y nadie toma decisiones. me escriben a cualquier hora, incluso de noche"
+3,"estoy agotado, la carga es enorme. mi equipo quedó desarmado, se fue la mitad"
+4,Sin comentarios.
+5,"La verdad, mi lider me apoya y me da feedback."
+6,Pagan poco para lo que exigen. Hace años que no tengo un ascenso.
+7,Trabajo con gente muy capaz. Se respetan los horarios. Las reuniones son cortas y sirven.
+8,"En general, trabajo casi todos los fines de semana. Mi equipo quedó desarmado, se fue la mitad."
+9,Se respetan los horarios. Hay mucha competencia interna. Pero hay muchos cursos y tiempo para hacerlos.
+10,Para ser nuevo me siento muy comodo. Paso el dia en reuniones que no sirven para nada.
+11,Nadie me explicó cómo funcionaban las cosas cuando entré.
+12,"En general, la carga de trabajo es razonable. No me puedo quejar del sueldo."
+13,No me puedo quejar del sueldo. Pero hay mucha competencia interna. Las decisiones bajan sin explicacion.
+14,"Nada, cero flexibilidad con los horarios."
+15,Mi trabajo tiene sentido. Pero mi jefe no escucha. Me encanta el proyecto en el que estoy.
+16,
+17,"En general, cero flexibilidad con los horarios. Estoy quemado."
+18,"Estoy desmotivado. Demasiadas reuniones, no me queda tiempo para trabajar. No hay buen clima entre las áreas."
+19,Puedo organizar mis horarios. Trabajo con gente muy capaz.
+20,"Demasiadas reuniones, no me queda tiempo para trabajar."
+21,Hace años que no tengo un ascenso. Hay mucha competencia interna. Las decisiones bajan sin explicación.
+22,"Nada, la flexibilidad del home office es lo mejor. Las weeklys son útiles. Nunca me faltó apoyo del equipo."
+23,"En general, excelente el aumento, me alcanza para un café. Me escriben a cualquier hora, incluso de noche. Genial, otra reunión que podría haber sido un mail."
+24,El clima en el equipo es malo. No me puedo quejar de la flexibilidad. Me dieron la oportunidad de liderar un proyecto.
+25,La dirección es clara.
+26,mi líder me apoya y me da feedback. aprendo un montón todos los días. mi trabajo tiene sentido
+27,La dirección es clara. Pero no es un buen lugar para hacer carrera.
+28,Me encanta contestar mails el domingo. Tengo la agenda llena de reuniones. No recibo feedback nunca.
+29,"Sinceramente, hay muy buena onda con los compañeros. No hay forma de desconectarse."
+30,"Sinceramente, siempre hay alguien para darte una mano. Pero nadie me explicó cómo funcionaban las cosas cuando entré."
+31,"Nada, siento que estoy creciendo profesionalmente. El onboarding fue muy bueno. Hay muy buena onda con los compañeros."
+32,Falta liderazgo y nadie toma decisiones.
+33,"Sinceramente, terminé el año fundido. El sueldo quedó atrasado con la inflación. Me tiraron a la pileta sin capacitación."
+34,"En general, me dieron la oportunidad de liderar un proyecto. Las reuniones son cortas y sirven."
+35,SOMOS POCOS PARA TODO LO QUE HAY QUE HACER. TENGO LA AGENDA LLENA DE REUNIONES.
+36,"en general, trabajo con gente muy capaz"
+37,Hay buen equilibrio entre el trabajo y la vida personal.
+38,Las decisiones bajan sin explicación.
+39,"nada, siempre hay alguien para darte una mano. tengo una jefa que escucha. puedo organizar mis horarios"
+40,Hay muchos cursos y tiempo para hacerlos. Hay buen equilibrio entre el trabajo y la vida personal.
+41,"Sinceramente, estoy quemado."
+42,"En general, los aumentos no alcanzan."
+43,"Mi equipo quedó desarmado, se fue la mitad."
+44,"La verdad, cero flexibilidad con los horarios."
+45,"La verdad, terminé el año fundido. El clima en el equipo es malo."
+46,Las decisiones bajan sin explicación. Pero no me puedo quejar del sueldo. Amo las reuniones de dos horas para no decidir nada.
+47,"En general, mi trabajo tiene sentido. Los beneficios son buenos. Mi lider me apoya y me da feedback."
+48,"En general, tengo la agenda llena de reuniones. Pero mi trabajo tiene sentido. Las decisiones bajan sin explicación."
+49,
+50,hay muy buena onda con los compañeros. tenemos pocas reuniones y bien organizadas
+51,"La verdad, siento que mi trabajo no le importa a nadie. Me encanta el proyecto en el que estoy."
+52,"Sinceramente, hay muy buena onda con los compañeros."
+53,Tenemos pocas reuniones y bien organizadas. Mi líder me apoya y me da feedback. Los beneficios son buenos.
+54,Sin comentarios.
+55,"La verdad, terminé el año fundido."
+56,Me capacitaron muy bien cuando entré. No hay buen clima entre las áreas. Pero la dirección es clara.
+57,"nada, trabajo con gente muy capaz"
+58,"Nada, las reuniones son cortas y sirven. Tengo un mentor que me ayuda mucho. Mi lider me apoya y me da feedback."
+59,PUEDO ORGANIZAR MIS HORARIOS.
+60,"En general, siento que mi trabajo no le importa a nadie."
+61,Puedo organizar mis horarios. Pero el sueldo quedó atrasado con la inflación. No hay buen clima entre las áreas.
+62,nada
+63,Trabajo con gente muy capaz. Me ascendieron este año.
+64,Sin comentarios.
+65,No me piden cosas fuera de horario.
+66,No veo posibilidades de crecer. Tengo la agenda llena de reuniones.
+67,No me siento valorado. Paso el día en reuniones que no sirven para nada.
+68,"En general, hay muy buena onda con los compañeros. No me piden cosas fuera de horario. Tengo una jefa que escucha."
+69,"La verdad, trabajo con gente muy capaz."
+70,"Mi equipo quedó desarmado, se fue la mitad. Me dieron la oportunidad de liderar un proyecto."
+71,tenemos pocas reuniones y bien organizadas
+72,"Nada, nunca me falto apoyo del equipo. Me ascendieron este año."
+73,Las weeklys son útiles.
+74,la dirección es clara. me ascendieron este año
+75,Hay muy buena onda con los compañeros. Tenemos pocas reuniones y bien organizadas. Hago siempre lo mismo y me aburro.
+76,"En general, para ser nuevo me siento muy cómodo. No me puedo quejar del sueldo. Pero cero flexibilidad con los horarios."
+77,"Nada, mi equipo quedo desarmado, se fue la mitad."
+78,"Nada, me ascendieron este año. Tenemos pocas reuniones y bien organizadas. Se respetan los horarios."
+79,
+80,
+81,Tengo la agenda llena de reuniones. Pero trabajo con gente muy capaz.
+82,"En general, mi jefe no escucha."
+83,"la verdad, no me puedo quejar de la flexibilidad. me ascendieron este año"
+84,Tengo la agenda llena de reuniones. Pero siempre hay alguien para darte una mano.
+85,"La verdad, pagan poco para lo que exigen. Cero flexibilidad con los horarios."
+86,"En general, reuniones eternas en las que no se decide nada."
+87,"En general, siempre hay alguien para darte una mano. No me piden cosas fuera de horario."
+88,No hay forma de desconectarse. Buenisimo hacer exactamente lo mismo hace cinco años.
+89,Terminé el año fundido.
+90,
+91,"Sinceramente, hay muy buena onda con los compañeros. Tenemos pocas reuniones y bien organizadas."
+92,"Excelente el aumento, me alcanza para un café. Hago siempre lo mismo y me aburro. Genial enterarme de los cambios por el chat."
+93,Me ascendieron este año. Los beneficios son buenos.
+94,"La verdad, el onboarding fue un caos."
+95,"la verdad, para ser nuevo me siento muy cómodo. pero mi jefe no escucha"
+96,
+97,"Sinceramente, me encanta el proyecto en el que estoy. El sueldo esta bien para el mercado. Mi jefe no escucha."
+98,"Nada, siempre hay alguien para darte una mano. Mi líder me apoya y me da feedback. Cero flexibilidad con los horarios."
+99,
+100,"En general, para ser nuevo me siento muy cómodo. Tenemos pocas reuniones y bien organizadas."
+101,"Nada, puedo organizar mis horarios. Pero mi equipo quedó desarmado, se fue la mitad."
+102,siempre hay alguien para darte una mano. las weeklys son utiles. la flexibilidad del home office es lo mejor
+103,"sinceramente, nunca me faltó apoyo del equipo. para ser nuevo me siento muy cómodo"
+104,Hago siempre lo mismo y me aburro. Trabajo casi todos los fines de semana.
+105,"En general, me dieron la oportunidad de liderar un proyecto."
+106,"Genial, otra reunión que podría haber sido un mail. Pagan poco para lo que exigen. Nos sacaron el home office."
+107,"nada, no hay forma de desconectarse. paso el día en reuniones que no sirven para nada. excelente el aumento, me alcanza para un café"
+108,Mi líder me apoya y me da feedback.
+109,Hay mucha competencia interna. Reuniones eternas en las que no se decide nada.
+110,Estoy quemado. Paso el día en reuniones que no sirven para nada.
+111,no veo posibilidades de crecer
+112,"En general, hay muy buena onda con los compañeros. Las reuniones son cortas y sirven."
+113,Las decisiones bajan sin explicación. Trabajo casi todos los fines de semana. No veo posibilidades de crecer.
+114,Hay muy buena onda con los compañeros. Las reuniones son cortas y sirven.
+115,siempre hay alguien para darte una mano. el sueldo esta bien para el mercado
+116,Estoy desmotivado.
+117,
+118,"en general, trabajo con gente muy capaz"
+119,"Sinceramente, nos sacaron el home office. Pero no me puedo quejar del sueldo. Pero falta liderazgo y nadie toma decisiones."
+120,Reuniones eternas en las que no se decide nada.
+121,"La verdad, buenísimo hacer exactamente lo mismo hace cinco años. No me puedo quejar del sueldo."
+122,
+123,Me encanta el proyecto en el que estoy. El sueldo está bien para el mercado. Me dieron la oportunidad de liderar un proyecto.
+124,
+125,"la verdad, hace años que no tengo un ascenso. pero no me piden cosas fuera de horario. demasiadas reuniones, no me queda tiempo para trabajar"
+126,Mi lider me apoya y me da feedback. Me encanta el proyecto en el que estoy.
+127,"Sinceramente, por suerte no hay estrés, se trabaja tranquilo."
+128,me encanta el proyecto en el que estoy
+129,Somos pocos para todo lo que hay que hacer. Las decisiones bajan sin explicación. No es un buen lugar para hacer carrera.
+130,Tenemos pocas reuniones y bien organizadas.
+131,"La verdad, el onboarding fue un caos. Tenemos pocas reuniones y bien organizadas."
+132,Nunca me faltó apoyo del equipo. Las weeklys son útiles. No me puedo quejar del sueldo.
+133,"la verdad, aprendo un monton todos los dias. mi equipo es excelente"
+134,"En general, me encanta el proyecto en el que estoy. No me puedo quejar de la flexibilidad."
+135,Me tiraron a la pileta sin capacitacion. Las decisiones bajan sin explicacion. Pero me ascendieron este año.
+136,"en general, hay buen equilibrio entre el trabajo y la vida personal. la direccion es clara. los beneficios son buenos"
+137,"Sinceramente, no doy más con el volumen de trabajo. Demasiadas reuniones, no me queda tiempo para trabajar. Las decisiones bajan sin explicación."
+138,"En general, mi trabajo tiene sentido. El onboarding fue muy bueno. Mi líder me apoya y me da feedback."
+139,"La verdad, hay muy buena onda con los compañeros."
+140,-
+141,"NADA, NO HAY TIEMPO PARA CAPACITARSE."
+142,Hay mucha competencia interna.
+143,El clima en el equipo es malo.
+144,"Mi trabajo tiene sentido. Nunca me faltó apoyo del equipo. Pero estoy agotado, la carga es enorme."
+145,"Sinceramente, genial, otra reunión que podría haber sido un mail."
+146,
+147,"En general, para ser nuevo me siento muy comodo. Hay muy buena onda con los compañeros. Pero trabajo casi todos los fines de semana."
+148,"la verdad, el sueldo está bien para el mercado. hay muy buena onda con los compañeros"
+149,Mi líder me apoya y me da feedback. No me puedo quejar del sueldo.
+150,Cero flexibilidad con los horarios. Pero tengo una jefa que escucha.
+151,"Nada, mi equipo es excelente."
+152,"Nada, falta liderazgo y nadie toma decisiones."
+153,"La verdad, me dieron la oportunidad de liderar un proyecto. Mi líder me apoya y me da feedback. Las weeklys son útiles."
+154,"En general, no es un buen lugar para hacer carrera. Trabajo casi todos los fines de semana."
+155,"La verdad, por suerte no hay estrés, se trabaja tranquilo. Pero no hay tiempo para capacitarse. Reuniones eternas en las que no se decide nada."
+156,La direccion es clara. Las reuniones son cortas y sirven. Tengo un mentor que me ayuda mucho.
+157,La flexibilidad del home office es lo mejor. Tengo una jefa que escucha.
+158,"Sinceramente, pagan poco para lo que exigen."
+159,"Sinceramente, amo las reuniones de dos horas para no decidir nada. Mi trabajo tiene sentido. Los beneficios son buenos."
+160,Somos pocos para todo lo que hay que hacer. Las decisiones bajan sin explicación.
+161,"Sinceramente, buenisimo hacer exactamente lo mismo hace cinco años. Los aumentos no alcanzan. Falta liderazgo y nadie toma decisiones."
+162,"La verdad, la flexibilidad del home office es lo mejor. Trabajo con gente muy capaz."
+163,"la verdad, siento que mi trabajo no le importa a nadie"
+164,"La verdad, valoran lo que hago. Trabajo con gente muy capaz. Los beneficios son buenos."
+165,nada
+166,"La verdad, mi lider me apoya y me da feedback. Pero divino el equipo, cada uno por su lado. El sueldo quedo atrasado con la inflacion."
+167,"la verdad, somos pocos para todo lo que hay que hacer. divino el equipo, cada uno por su lado"
+168,"Nada, excelente, otra semana de sesenta horas. Pero tenemos pocas reuniones y bien organizadas."
+169,"Sinceramente, hay mucha competencia interna. Pero el sueldo está bien para el mercado."
+170,"EN GENERAL, MI TRABAJO TIENE SENTIDO."
+171,"En general, hago siempre lo mismo y me aburro."
+172,
+173,nada para agregar
+174,"Sinceramente, no veo posibilidades de crecer. Trabajo casi todos los fines de semana."
+175,nada para agregar
+176,"La verdad, llego reventado a fin de mes."
+177,"En general, me encanta el proyecto en el que estoy. Terminé el año fundido."
+178,El clima en el equipo es malo.
+179,aprendo un montón todos los días
+180,"nada, las decisiones bajan sin explicación"
+181,"EN GENERAL, TRABAJO CASI TODOS LOS FINES DE SEMANA. EL SUELDO QUEDÓ ATRASADO CON LA INFLACIÓN."
+182,me tiraron a la pileta sin capacitacion. tengo una jefa que escucha
+183,"En general, por suerte no hay estrés, se trabaja tranquilo. La flexibilidad del home office es lo mejor."
+184,"En general, hay muy buena onda con los compañeros. La carga de trabajo es razonable."
+185,Estoy desmotivado. El sueldo quedó atrasado con la inflación.
+186,Reuniones eternas en las que no se decide nada. La carga de trabajo es razonable.
+187,Me encanta el proyecto en el que estoy. El sueldo está bien para el mercado.
+188,Siento que estoy creciendo profesionalmente.
+189,estoy desmotivado. siempre hay alguien para darte una mano
+190,Tengo una jefa que escucha. El sueldo está bien para el mercado. Pero no hay forma de desconectarse.
+191,
+192,"En general, hay muy buena onda con los compañeros."
+193,"la verdad, siento que estoy creciendo profesionalmente. pero pagan poco para lo que exigen"
+194,
+195,"Nada, las reuniones son cortas y sirven. Nunca me faltó apoyo del equipo. Mi trabajo tiene sentido."
+196,
+197,Estoy desmotivado. Pero las weeklys son utiles.
+198,"Nada, mi trabajo tiene sentido."
+199,"nada, me capacitaron muy bien cuando entré. pero hay mucha competencia interna"
+200,No es un buen lugar para hacer carrera.
+201,Tenemos pocas reuniones y bien organizadas.
+202,"El onboarding fue muy bueno. Mi equipo quedó desarmado, se fue la mitad."
+203,Hay muy buena onda con los compañeros. Mi líder me apoya y me da feedback. Hay buen equilibrio entre el trabajo y la vida personal.
+204,Mi trabajo tiene sentido.
+205,"En general, el sueldo está bien para el mercado. Mi líder me apoya y me da feedback. Trabajo con gente muy capaz."
+206,"Sinceramente, me ascendieron este año. La flexibilidad del home office es lo mejor. Hay mucha competencia interna."
+207,"Sinceramente, tenemos pocas reuniones y bien organizadas. El sueldo quedó atrasado con la inflación."
+208,"sinceramente, no me siento valorado. mi jefe no escucha"
+209,"En general, siempre hay alguien para darte una mano. La dirección es clara."
+210,"Nada, no me siento valorado."
+211,"Sinceramente, para ser nuevo me siento muy cómodo. Mi líder me apoya y me da feedback."
+212,"En general, tengo que ir a la oficina para hacer videollamadas."
+213,
+214,Tenemos pocas reuniones y bien organizadas. Siento que estoy creciendo profesionalmente.
+215,"La verdad, tenemos pocas reuniones y bien organizadas. El sueldo quedó atrasado con la inflación. Me escriben a cualquier hora, incluso de noche."
+216,"Nada, me encanta contestar mails el domingo. Buenisimo hacer exactamente lo mismo hace cinco años. Pagan poco para lo que exigen."
+217,La flexibilidad del home office es lo mejor. Trabajo con gente muy capaz.
+218,No hay buen clima entre las áreas. No recibo feedback nunca.
+219,EL CLIMA EN EL EQUIPO ES MALO. TENGO QUE IR A LA OFICINA PARA HACER VIDEOLLAMADAS.
+220,"La verdad, la carga de trabajo es razonable. Nos sacaron el home office."
+221,"Sinceramente, falta liderazgo y nadie toma decisiones. Buenísimo hacer exactamente lo mismo hace cinco años."
+222,nunca me faltó apoyo del equipo
+223,"Nada, tengo una jefa que escucha."
+224,"La verdad, la carga de trabajo es razonable."
+225,Nunca me falto apoyo del equipo. Los beneficios son buenos. Las weeklys son utiles.
+226,Puedo organizar mis horarios. Mi líder me apoya y me da feedback.
+227,Las decisiones bajan sin explicacion. Los aumentos no alcanzan.
+228,No me siento valorado. Hay mucha competencia interna. Mi jefe no escucha.
+229,"LA VERDAD, MI TRABAJO TIENE SENTIDO. PERO ESTOY AGOTADO, LA CARGA ES ENORME."
+230,"Nada, no es un buen lugar para hacer carrera. El sueldo quedó atrasado con la inflación."
+231,Siento que estoy creciendo profesionalmente. No me puedo quejar del sueldo.
+232,.
+233,El sueldo quedó atrasado con la inflación.
+234,No recibo feedback nunca. Pero trabajo con gente muy capaz.
+235,Siento que mi trabajo no le importa a nadie. No recibo feedback nunca. El sueldo quedó atrasado con la inflación.
+236,
+237,No me puedo quejar del sueldo. Pero no me siento valorado. Las reuniones son cortas y sirven.
+238,"la verdad, el clima en el equipo es malo. genial enterarme de los cambios por el chat"
+239,Siento que mi trabajo no le importa a nadie. Me encanta contestar mails el domingo. Tengo que ir a la oficina para hacer videollamadas.
+240,"La verdad, nunca me faltó apoyo del equipo. Pero me encanta viajar una hora para hacer zooms desde la oficina."
+241,"Sinceramente, los aumentos no alcanzan. Las decisiones bajan sin explicación. Hay mucha competencia interna."
+242,"Sinceramente, no me puedo quejar del sueldo."
+243,"Nada, cero flexibilidad con los horarios. Pero siento que estoy creciendo profesionalmente."
+244,La dirección es clara. Reuniones eternas en las que no se decide nada. No hay buen clima entre las áreas.
+245,"La verdad, las weeklys son utiles."
+246,"Sinceramente, puedo organizar mis horarios. Por suerte no hay estres, se trabaja tranquilo."
+247,"sinceramente, no doy mas con el volumen de trabajo. pero puedo organizar mis horarios"
+248,"EN GENERAL, MI EQUIPO ES EXCELENTE. PARA SER NUEVO ME SIENTO MUY CÓMODO."
+249,"La verdad, mi jefe no escucha. Buenisimo hacer exactamente lo mismo hace cinco años."
+250,"mi líder me apoya y me da feedback. pero genial, otra reunión que podría haber sido un mail"
+251,El sueldo quedo atrasado con la inflacion. Hay mucha competencia interna. Hace años que no tengo un ascenso.
+252,No me siento valorado. Hay mucha competencia interna. Tengo la agenda llena de reuniones.
+253,"Sinceramente, me encanta contestar mails el domingo."
+254,"En general, no es un buen lugar para hacer carrera."
+255,Tengo una jefa que escucha. Pero estoy desmotivado.
+256,"La verdad, el clima en el equipo es malo."
+257,"Genial, otra reunion que podria haber sido un mail. Somos pocos para todo lo que hay que hacer."
+258,Siento que mi trabajo no le importa a nadie.
+259,
+260,"La verdad, estoy desmotivado. No doy más con el volumen de trabajo. Las decisiones bajan sin explicación."
+261,-
+262,.
+263,Aprendo un montón todos los días. Trabajo con gente muy capaz.
+264,"Nada, la flexibilidad del home office es lo mejor."
+265,Mi equipo es excelente.
+266,Hay muchos cursos y tiempo para hacerlos.
+267,"Nada, nos sacaron el home office. Tengo un mentor que me ayuda mucho."
+268,Paso el día en reuniones que no sirven para nada. Nadie me explicó cómo funcionaban las cosas cuando entré. Mi jefe no escucha.
+269,
+270,MI EQUIPO ES EXCELENTE. VALORAN LO QUE HAGO. PARA SER NUEVO ME SIENTO MUY CÓMODO.
+271,"Nada, pagan poco para lo que exigen. Hago siempre lo mismo y me aburro. Nos sacaron el home office."
+272,"Las weeklys son útiles. Por suerte no hay estrés, se trabaja tranquilo."
+273,No me piden cosas fuera de horario.
+274,"Nada, el sueldo quedó atrasado con la inflación. Tengo que ir a la oficina para hacer videollamadas. Somos pocos para todo lo que hay que hacer."
+275,"Nada, me encanta el proyecto en el que estoy. Pero las decisiones bajan sin explicacion."
+276,"La verdad, tengo la agenda llena de reuniones. No veo posibilidades de crecer."
+277,no me puedo quejar de la flexibilidad
+278,Reuniones eternas en las que no se decide nada. Somos pocos para todo lo que hay que hacer.
+279,TENGO LA AGENDA LLENA DE REUNIONES.
+280,Estoy desmotivado. Paso el día en reuniones que no sirven para nada.
+281,"Nada, falta liderazgo y nadie toma decisiones."
+282,"Estoy quemado. Pagan poco para lo que exigen. Demasiadas reuniones, no me queda tiempo para trabajar."
+283,"La verdad, hay buen equilibrio entre el trabajo y la vida personal. Las reuniones son cortas y sirven. Los aumentos no alcanzan."
+284,"En general, la dirección es clara. No me piden cosas fuera de horario."
+285,"La verdad, mi jefe no escucha."
+286,"No me piden cosas fuera de horario. Pero hay mucha competencia interna. Excelente el aumento, me alcanza para un café."
+287,"Sinceramente, falta liderazgo y nadie toma decisiones."
+288,"Nada, genial enterarme de los cambios por el chat. No veo posibilidades de crecer."
+289,"No es un buen lugar para hacer carrera. Mi equipo quedo desarmado, se fue la mitad. Pero tenemos pocas reuniones y bien organizadas."
+290,Trabajo casi todos los fines de semana. Tengo que ir a la oficina para hacer videollamadas.
+291,"EN GENERAL, EL SUELDO QUEDÓ ATRASADO CON LA INFLACIÓN. NO ME SIENTO VALORADO."
+292,"NADA, MI EQUIPO ES EXCELENTE."
+293,"Sinceramente, se respetan los horarios. Aprendo un monton todos los dias."
+294,me encanta el proyecto en el que estoy. tengo una jefa que escucha. no me puedo quejar del sueldo
+295,No hay tiempo para capacitarse. Me ascendieron este año.
+296,"La verdad, mi equipo quedó desarmado, se fue la mitad."
+297,Llego reventado a fin de mes. Los beneficios son buenos.
+298,"En general, llego reventado a fin de mes."
+299,"la verdad, no me piden cosas fuera de horario. para ser nuevo me siento muy comodo"
+300,Mi jefe no escucha. Siempre hay alguien para darte una mano. Me dieron la oportunidad de liderar un proyecto.
+301,"En general, nunca me faltó apoyo del equipo."
+302,"sinceramente, nunca tuve que quedarme hasta tarde. hay muy buena onda con los compañeros. el sueldo está bien para el mercado"
+303,"sinceramente, tengo la agenda llena de reuniones. termine el año fundido"
+304,Mi equipo es excelente. Tenemos pocas reuniones y bien organizadas.
+305,"Sinceramente, falta liderazgo y nadie toma decisiones. No es un buen lugar para hacer carrera. Pero nunca me faltó apoyo del equipo."
+306,Se respetan los horarios.
+307,"Nada, nunca tuve que quedarme hasta tarde."
+308,Hago siempre lo mismo y me aburro. Hay mucha competencia interna.
+309,"Nada, el sueldo esta bien para el mercado. Mi trabajo tiene sentido."
+310,"En general, tenemos pocas reuniones y bien organizadas. Valoran lo que hago. Tengo una jefa que escucha."
+311,"La verdad, hay mucha competencia interna."
+312,Siempre hay alguien para darte una mano. Me dieron la oportunidad de liderar un proyecto. No me piden cosas fuera de horario.
+313,"nada, excelente onboarding: un link a una carpeta y suerte. siento que estoy creciendo profesionalmente"
+314,"NADA, NO RECIBO FEEDBACK NUNCA. LOS AUMENTOS NO ALCANZAN. ME ESCRIBEN A CUALQUIER HORA, INCLUSO DE NOCHE."
+315,"Sinceramente, la dirección es clara. Pero hay mucha competencia interna. Buenísimo hacer exactamente lo mismo hace cinco años."
+316,"Nada, siento que estoy creciendo profesionalmente. Las weeklys son utiles."
+317,Los beneficios son buenos. Pero hay mucha competencia interna.
+318,
+319,"La verdad, nunca tuve que quedarme hasta tarde."
+320,Hay buen equilibrio entre el trabajo y la vida personal. El clima en el equipo es malo.
+321,Para ser nuevo me siento muy cómodo. Somos pocos para todo lo que hay que hacer.
+322,"Sinceramente, me encanta viajar una hora para hacer zooms desde la oficina. No veo posibilidades de crecer. Divino el equipo, cada uno por su lado."
+323,Cero flexibilidad con los horarios. Termine el año fundido. Los aumentos no alcanzan.
+324,"La verdad, no me siento valorado."
+325,Hay mucha competencia interna. Mi jefe no escucha.
+326,"Nada, hay mucha competencia interna. Cero flexibilidad con los horarios. Mi jefe no escucha."
+327,"Nada, siempre hay alguien para darte una mano."
+328,Se respetan los horarios.
+329,mi líder me apoya y me da feedback. pero estoy quemado
+330,"La verdad, no veo posibilidades de crecer. El clima en el equipo es malo."
+331,"LA VERDAD, TENGO UN MENTOR QUE ME AYUDA MUCHO."
+332,.
+333,"Nada, tengo una jefa que escucha. Me dieron la oportunidad de liderar un proyecto."
+334,Siento que mi trabajo no le importa a nadie. No hay buen clima entre las areas. El sueldo quedo atrasado con la inflacion.
+335,cero flexibilidad con los horarios. hace años que no tengo un ascenso
+336,El clima en el equipo es malo. Trabajo casi todos los fines de semana. Puedo organizar mis horarios.
+337,"Estoy agotado, la carga es enorme. El sueldo está bien para el mercado. Pero demasiadas reuniones, no me queda tiempo para trabajar."
+338,Nadie me explicó cómo funcionaban las cosas cuando entré.
+339,"Demasiadas reuniones, no me queda tiempo para trabajar."
+340,"Nada, las decisiones bajan sin explicación."
+341,La dirección es clara. No me puedo quejar del sueldo.
+342,El sueldo quedó atrasado con la inflación.
+343,"Demasiadas reuniones, no me queda tiempo para trabajar."
+344,"En general, tengo la agenda llena de reuniones. Pero se respetan los horarios. No me puedo quejar del sueldo."
+345,"demasiadas reuniones, no me queda tiempo para trabajar. no es un buen lugar para hacer carrera. no hay buen clima entre las áreas"
+346,No hay forma de desconectarse. Los aumentos no alcanzan.
+347,"En general, tengo la agenda llena de reuniones. Pero nunca tuve que quedarme hasta tarde. No hay buen clima entre las areas."
+348,Mi equipo es excelente. Me ascendieron este año.
+349,El clima en el equipo es malo. Pero para ser nuevo me siento muy cómodo.
+350,Terminé el año fundido.
+351,"En general, el sueldo esta bien para el mercado. Para ser nuevo me siento muy comodo. Pero no es un buen lugar para hacer carrera."
+352,-
+353,"NADA, ME CAPACITARON MUY BIEN CUANDO ENTRÉ. LA FLEXIBILIDAD DEL HOME OFFICE ES LO MEJOR. MI JEFE NO ESCUCHA."
+354,"Estoy agotado, la carga es enorme."
+355,Trabajo casi todos los fines de semana. Pero las reuniones son cortas y sirven.
+356,No me puedo quejar de la flexibilidad. Aprendo un monton todos los dias.
+357,"La verdad, estoy desmotivado. Reuniones eternas en las que no se decide nada."
+358,Genial enterarme de los cambios por el chat. No me siento valorado.
+359,"Sinceramente, la flexibilidad del home office es lo mejor. Tengo una jefa que escucha."
+360,Tengo una jefa que escucha. Siempre hay alguien para darte una mano. Valoran lo que hago.
+361,Me encanta el proyecto en el que estoy.
+362,Pagan poco para lo que exigen. Falta liderazgo y nadie toma decisiones.
+363,Mi jefe no escucha. No veo posibilidades de crecer. Termine el año fundido.
+364,"Nada, me ascendieron este año. No me puedo quejar del sueldo."
+365,Siempre hay alguien para darte una mano.
+366,Las reuniones son cortas y sirven. Pero estoy desmotivado.
+367,"Sinceramente, mi equipo quedo desarmado, se fue la mitad. Las weeklys son utiles. Me dieron la oportunidad de liderar un proyecto."
+368,"ME ESCRIBEN A CUALQUIER HORA, INCLUSO DE NOCHE. PERO TENGO UNA JEFA QUE ESCUCHA."
+369,No hay buen clima entre las areas.
+370,tengo un mentor que me ayuda mucho. no me siento valorado
+371,"Sinceramente, me encanta el proyecto en el que estoy."
+372,No me puedo quejar de la flexibilidad.
+373,Tengo la agenda llena de reuniones. El sueldo quedó atrasado con la inflación.
+374,"Nada, el sueldo quedó atrasado con la inflación."
+375,no me puedo quejar de la flexibilidad
+376,"La verdad, no me siento valorado. Pero el sueldo está bien para el mercado."
+377,"Nada, me capacitaron muy bien cuando entré. La flexibilidad del home office es lo mejor."
+378,"EN GENERAL, ME DIERON LA OPORTUNIDAD DE LIDERAR UN PROYECTO. LA DIRECCIÓN ES CLARA. LOS BENEFICIOS SON BUENOS."
+379,hay mucha competencia interna. me tiraron a la pileta sin capacitación
+380,"En general, tengo una jefa que escucha. Nunca me faltó apoyo del equipo."
+381,"Sinceramente, el onboarding fue muy bueno. Nunca me falto apoyo del equipo."
+382,"La verdad, tengo la agenda llena de reuniones. Los aumentos no alcanzan."
+383,"La verdad, nunca me falto apoyo del equipo."
+384,"La verdad, trabajo casi todos los fines de semana. Demasiadas reuniones, no me queda tiempo para trabajar."
+385,Pagan poco para lo que exigen.
+386,Hay muy buena onda con los compañeros.
+387,
+388,La flexibilidad del home office es lo mejor. No hay buen clima entre las areas.
+389,Estoy quemado.
+390,Valoran lo que hago. Trabajo casi todos los fines de semana. Pero no me puedo quejar de la flexibilidad.
+391,"Demasiadas reuniones, no me queda tiempo para trabajar."
+392,"La verdad, aprendo un montón todos los días. No me puedo quejar de la flexibilidad."
+393,Me tiraron a la pileta sin capacitación. Pero no me puedo quejar de la flexibilidad. Pero buenísimo hacer exactamente lo mismo hace cinco años.
+394,"no hay buen clima entre las áreas. pero por suerte no hay estrés, se trabaja tranquilo"
+395,"En general, me ascendieron este año. Pero falta liderazgo y nadie toma decisiones. Hay mucha competencia interna."
+396,"Sinceramente, mi trabajo tiene sentido. Me encanta el proyecto en el que estoy."
+397,"La verdad, hay muy buena onda con los compañeros. Se respetan los horarios."
+398,tengo una jefa que escucha. me tiraron a la pileta sin capacitación. trabajo con gente muy capaz
+399,Nunca me faltó apoyo del equipo. Las reuniones son cortas y sirven. Hace años que no tengo un ascenso.
+400,"La verdad, mi jefe no escucha. Los aumentos no alcanzan. Demasiadas reuniones, no me queda tiempo para trabajar."
+401,nada
+402,"En general, paso el día en reuniones que no sirven para nada."
+403,
+404,"La verdad, trabajo con gente muy capaz. Me tiraron a la pileta sin capacitacion. Pero siento que estoy creciendo profesionalmente."
+405,"En general, nunca tuve que quedarme hasta tarde."
+406,"Nada, hace años que no tengo un ascenso. Pero las weeklys son útiles."
+407,Paso el día en reuniones que no sirven para nada. Hay mucha competencia interna.
+408,"Sinceramente, la carga de trabajo es razonable. El clima en el equipo es malo. Pero la flexibilidad del home office es lo mejor."
+409,No me puedo quejar de la flexibilidad. Pero pagan poco para lo que exigen.
+410,"Sinceramente, nunca me falto apoyo del equipo. Pero tengo que ir a la oficina para hacer videollamadas. Mi trabajo tiene sentido."
+411,El onboarding fue muy bueno. Genial enterarme de los cambios por el chat. Valoran lo que hago.
+412,
+413,"Me escriben a cualquier hora, incluso de noche. Divino el equipo, cada uno por su lado. Hago siempre lo mismo y me aburro."
+414,"La verdad, las reuniones son cortas y sirven. Mi líder me apoya y me da feedback. La flexibilidad del home office es lo mejor."
+415,Trabajo con gente muy capaz. No me puedo quejar de la flexibilidad.
+416,"Nada, estoy desmotivado. Genial enterarme de los cambios por el chat."
+417,"Sinceramente, excelente, otra semana de sesenta horas."
+418,Las weeklys son útiles.
+419,"Nada, nadie me explicó cómo funcionaban las cosas cuando entré. Amo las reuniones de dos horas para no decidir nada. Mi equipo quedó desarmado, se fue la mitad."
+420,Mi trabajo tiene sentido.
+421,ME TIRARON A LA PILETA SIN CAPACITACIÓN.
+422,"Nada, paso el día en reuniones que no sirven para nada."
+423,"En general, siento que estoy creciendo profesionalmente. La carga de trabajo es razonable."
+424,Amo las reuniones de dos horas para no decidir nada.
+425,nada
+426,Me dieron la oportunidad de liderar un proyecto.
+427,Aprendo un montón todos los días. Mi líder me apoya y me da feedback. No me puedo quejar del sueldo.
+428,El onboarding fue muy bueno. Mi equipo es excelente. Pero me encanta viajar una hora para hacer zooms desde la oficina.
+429,Hay mucha competencia interna. Hago siempre lo mismo y me aburro.
+430,"La verdad, nunca me faltó apoyo del equipo. No me puedo quejar de la flexibilidad. Los beneficios son buenos."
+431,"SINCERAMENTE, EXCELENTE ONBOARDING: UN LINK A UNA CARPETA Y SUERTE. NUNCA TUVE QUE QUEDARME HASTA TARDE."
+432,Hago siempre lo mismo y me aburro. Terminé el año fundido. Pagan poco para lo que exigen.
+433,"Nada, mi equipo quedo desarmado, se fue la mitad."
+434,"Nada, para ser nuevo me siento muy cómodo. No me puedo quejar de la flexibilidad. Mi líder me apoya y me da feedback."
+435,
+436,no me siento valorado. pero no me piden cosas fuera de horario
+437,no hay buen clima entre las áreas
+438,Pagan poco para lo que exigen. Siento que estoy creciendo profesionalmente.
+439,"En general, no me puedo quejar de la flexibilidad. Pero las decisiones bajan sin explicación. Pero el onboarding fue muy bueno."
+440,"La verdad, no hay forma de desconectarse."
+441,"Nada, mi equipo quedó desarmado, se fue la mitad. Llego reventado a fin de mes."
+442,La flexibilidad del home office es lo mejor.
+443,El sueldo está bien para el mercado.
+444,Mi líder me apoya y me da feedback. No me puedo quejar del sueldo. Tengo un mentor que me ayuda mucho.
+445,"Nada, no hay buen clima entre las áreas. Tengo la agenda llena de reuniones."
+446,"La verdad, paso el dia en reuniones que no sirven para nada."
+447,"La verdad, llego reventado a fin de mes. Hay mucha competencia interna."
+448,"Sinceramente, tengo un mentor que me ayuda mucho. Puedo organizar mis horarios. Me ascendieron este año."
+449,Trabajo con gente muy capaz. Siento que estoy creciendo profesionalmente. Cero flexibilidad con los horarios.
+450,Hay mucha competencia interna.
+451,"Sinceramente, el clima en el equipo es malo. Pero el sueldo esta bien para el mercado. Mi trabajo tiene sentido."
+452,Nunca me faltó apoyo del equipo. La flexibilidad del home office es lo mejor.
+453,nada para agregar
+454,"Nada, tengo un mentor que me ayuda mucho. Puedo organizar mis horarios."
+455,"En general, para ser nuevo me siento muy comodo. Siempre hay alguien para darte una mano. La direccion es clara."
+456,"En general, para ser nuevo me siento muy comodo. Me dieron la oportunidad de liderar un proyecto."
+457,No me puedo quejar de la flexibilidad.
+458,Se respetan los horarios.
+459,MI LÍDER ME APOYA Y ME DA FEEDBACK.
+460,Estoy desmotivado.
+461,"Nada, falta liderazgo y nadie toma decisiones. Pagan poco para lo que exigen."
+462,"Nada, terminé el año fundido. Demasiadas reuniones, no me queda tiempo para trabajar."
+463,Mi equipo es excelente. Tenemos pocas reuniones y bien organizadas. El onboarding fue muy bueno.
+464,las reuniones son cortas y sirven. pero genial trabajar de noche también
+465,No me puedo quejar del sueldo.
+466,Pagan poco para lo que exigen. Nunca tuve que quedarme hasta tarde.
+467,Siempre hay alguien para darte una mano. Pero amo las reuniones de dos horas para no decidir nada.
+468,No me siento valorado.
+469,
+470,falta liderazgo y nadie toma decisiones
+471,Buenísimo hacer exactamente lo mismo hace cinco años. Nunca me faltó apoyo del equipo. Mi líder me apoya y me da feedback.
+472,La carga de trabajo es razonable. El sueldo esta bien para el mercado.
+473,"SINCERAMENTE, SIEMPRE HAY ALGUIEN PARA DARTE UNA MANO. LAS WEEKLYS SON ÚTILES. MI TRABAJO TIENE SENTIDO."
+474,"me ascendieron este año. por suerte no hay estrés, se trabaja tranquilo. tenemos pocas reuniones y bien organizadas"
+475,Las decisiones bajan sin explicacion.
+476,"Sinceramente, la carga de trabajo es razonable. Tengo una jefa que escucha."
+477,Las weeklys son útiles.
+478,Siempre hay alguien para darte una mano.
+479,"Nada, mi equipo es excelente. Pero los aumentos no alcanzan."
+480,"en general, nos sacaron el home office. no hay buen clima entre las areas. no doy mas con el volumen de trabajo"
+481,
+482,No me piden cosas fuera de horario. Hay muy buena onda con los compañeros. Las reuniones son cortas y sirven.
+483,el clima en el equipo es malo. siento que estoy creciendo profesionalmente. tengo que ir a la oficina para hacer videollamadas
+484,Siento que mi trabajo no le importa a nadie. Tengo que ir a la oficina para hacer videollamadas.
+485,"Nada, las decisiones bajan sin explicacion. Somos pocos para todo lo que hay que hacer."
+486,No me puedo quejar de la flexibilidad.
+487,No hay buen clima entre las áreas. No hay forma de desconectarse. No recibo feedback nunca.
+488,Hay mucha competencia interna. Me encanta viajar una hora para hacer zooms desde la oficina.
+489,Aprendo un monton todos los dias. Siempre hay alguien para darte una mano. No me puedo quejar del sueldo.
+490,"Sinceramente, reuniones eternas en las que no se decide nada. Pero me dieron la oportunidad de liderar un proyecto."
+491,"Sinceramente, mi líder me apoya y me da feedback. Pero me tiraron a la pileta sin capacitación. Pero la flexibilidad del home office es lo mejor."
+492,"La verdad, estoy agotado, la carga es enorme. Genial, otra reunión que podría haber sido un mail."
+493,"Nada, valoran lo que hago. La flexibilidad del home office es lo mejor."
+494,"en general, no me puedo quejar de la flexibilidad"
+495,"Sinceramente, demasiadas reuniones, no me queda tiempo para trabajar. No recibo feedback nunca."
+496,"Nada, me ascendieron este año. Tengo que ir a la oficina para hacer videollamadas. Pero siempre hay alguien para darte una mano."
+497,"Sinceramente, aprendo un montón todos los días. Pero mi equipo quedó desarmado, se fue la mitad."
+498,"No es un buen lugar para hacer carrera. Estoy agotado, la carga es enorme."
+499,Las reuniones son cortas y sirven.
+500,"Sinceramente, nadie me explicó cómo funcionaban las cosas cuando entré."
+501,
+502,"Nada, no me siento valorado. Cero flexibilidad con los horarios. Falta liderazgo y nadie toma decisiones."
+503,"En general, me encanta el proyecto en el que estoy. Me ascendieron este año."
+504,.
+505,"Nada, no me puedo quejar del sueldo. Pero mi jefe no escucha. Divino el equipo, cada uno por su lado."
+506,"Nada, el onboarding fue muy bueno. El sueldo está bien para el mercado. El clima en el equipo es malo."
+507,"La verdad, estoy quemado. Cero flexibilidad con los horarios."
+508,"Sinceramente, siento que estoy creciendo profesionalmente. Pagan poco para lo que exigen. Las decisiones bajan sin explicacion."
+509,"nada, el sueldo esta bien para el mercado. tengo un mentor que me ayuda mucho"
+510,Genial enterarme de los cambios por el chat. No me siento valorado.
+511,"En general, no recibo feedback nunca. Reuniones eternas en las que no se decide nada."
+512,"La verdad, cero flexibilidad con los horarios."
+513,Pagan poco para lo que exigen. El onboarding fue un caos. Hace años que no tengo un ascenso.
+514,Los beneficios son buenos. Siempre hay alguien para darte una mano. Mi líder me apoya y me da feedback.
+515,"La verdad, hay muchos cursos y tiempo para hacerlos. Pero amo las reuniones de dos horas para no decidir nada."
+516,"La verdad, estoy desmotivado."
+517,Trabajo con gente muy capaz.
+518,"sinceramente, paso el dia en reuniones que no sirven para nada. excelente el aumento, me alcanza para un cafe. hace años que no tengo un ascenso"
+519,"Nada, tengo que ir a la oficina para hacer videollamadas."
+520,Excelente onboarding: un link a una carpeta y suerte. No recibo feedback nunca. Tengo que ir a la oficina para hacer videollamadas.
+521,"sinceramente, puedo organizar mis horarios"
+522,"En general, mi equipo quedó desarmado, se fue la mitad. Me ascendieron este año. Mi jefe no escucha."
+523,-
+524,"La verdad, tengo que ir a la oficina para hacer videollamadas. Pero por suerte no hay estrés, se trabaja tranquilo."
+525,"En general, estoy quemado. El sueldo quedo atrasado con la inflacion."
+526,No es un buen lugar para hacer carrera.
+527,"Sinceramente, me ascendieron este año. Me encanta el proyecto en el que estoy."
+528,"Nada, cero flexibilidad con los horarios."
+529,Nadie me explicó cómo funcionaban las cosas cuando entré. No hay buen clima entre las áreas. Paso el día en reuniones que no sirven para nada.
+530,
+531,"La verdad, hay buen equilibrio entre el trabajo y la vida personal. Pero divino el equipo, cada uno por su lado."
+532,Me capacitaron muy bien cuando entre. Pero hay mucha competencia interna.
+533,"Nada, mi trabajo tiene sentido."
+534,se respetan los horarios. pero mi jefe no escucha
+535,"Nada, no me siento valorado. Demasiadas reuniones, no me queda tiempo para trabajar. Pagan poco para lo que exigen."
+536,El sueldo esta bien para el mercado.
+537,"En general, para ser nuevo me siento muy cómodo. Hay muy buena onda con los compañeros."
+538,"sinceramente, hago siempre lo mismo y me aburro"
+539,"En general, no doy mas con el volumen de trabajo. No me siento valorado. Pagan poco para lo que exigen."
+540,Me tiraron a la pileta sin capacitación.
+541,No recibo feedback nunca.
+542,Hay mucha competencia interna. Pero valoran lo que hago.
+543,El sueldo está bien para el mercado.
+544,"Sinceramente, tengo una jefa que escucha. Hay buen equilibrio entre el trabajo y la vida personal. Pagan poco para lo que exigen."
+545,Siento que estoy creciendo profesionalmente.
+546,el onboarding fue muy bueno. falta liderazgo y nadie toma decisiones. pero los beneficios son buenos
+547,"La verdad, me capacitaron muy bien cuando entre. Pero el sueldo quedo atrasado con la inflacion."
+548,"Estoy agotado, la carga es enorme."
+549,Tengo una jefa que escucha. Estoy desmotivado.
+550,.
+551,
+552,"En general, me tiraron a la pileta sin capacitación. No me piden cosas fuera de horario. Demasiadas reuniones, no me queda tiempo para trabajar."
+553,"Nada, siento que estoy creciendo profesionalmente. Nunca tuve que quedarme hasta tarde. Tengo una jefa que escucha."
+554,"Nada, nunca tuve que quedarme hasta tarde."
+555,"la verdad, paso el día en reuniones que no sirven para nada. el sueldo quedó atrasado con la inflación"
+556,"La verdad, mi equipo quedó desarmado, se fue la mitad."
+557,No hay buen clima entre las áreas. Pero las weeklys son útiles. Mi líder me apoya y me da feedback.
+558,El sueldo esta bien para el mercado. Para ser nuevo me siento muy comodo.
+559,"Paso el día en reuniones que no sirven para nada. Mi equipo quedó desarmado, se fue la mitad."
+560,"En general, nunca me faltó apoyo del equipo."
+561,nada para agregar
+562,"Nada, me ascendieron este año."
+563,Cero flexibilidad con los horarios.
+564,"Nada, mi jefe no escucha."
+565,Mi equipo es excelente. Tengo un mentor que me ayuda mucho. Los beneficios son buenos.
+566,El onboarding fue muy bueno. Pero mi jefe no escucha. Pero mi equipo es excelente.
+567,"EN GENERAL, SIENTO QUE MI TRABAJO NO LE IMPORTA A NADIE. LOS BENEFICIOS SON BUENOS. MI EQUIPO ES EXCELENTE."
+568,"En general, me encanta el proyecto en el que estoy."
+569,aprendo un montón todos los días. hay mucha competencia interna
+570,Para ser nuevo me siento muy cómodo. Mi líder me apoya y me da feedback. Siempre hay alguien para darte una mano.
+571,"La verdad, siempre hay alguien para darte una mano."
+572,"En general, por suerte no hay estres, se trabaja tranquilo. Mi equipo es excelente."
+573,"Sinceramente, siento que estoy creciendo profesionalmente. Tengo un mentor que me ayuda mucho."
+574,valoran lo que hago. el onboarding fue muy bueno
+575,"Sinceramente, puedo organizar mis horarios. Pero el onboarding fue un caos."
+576,"Sinceramente, tengo un mentor que me ayuda mucho."
+577,Buenísimo hacer exactamente lo mismo hace cinco años. Los aumentos no alcanzan.
+578,No veo posibilidades de crecer.
+579,"nada, demasiadas reuniones, no me queda tiempo para trabajar. no recibo feedback nunca"
+580,"Sinceramente, tengo una jefa que escucha. Hay muchos cursos y tiempo para hacerlos."
+581,"En general, se respetan los horarios. Mi jefe no escucha. Nadie me explicó cómo funcionaban las cosas cuando entré."
+582,"La verdad, tengo la agenda llena de reuniones. Hago siempre lo mismo y me aburro."
+583,Me encanta el proyecto en el que estoy. Mi lider me apoya y me da feedback. Las weeklys son utiles.
+584,No hay tiempo para capacitarse. Paso el día en reuniones que no sirven para nada.
+585,Mi trabajo tiene sentido. Las weeklys son útiles. Nunca me faltó apoyo del equipo.
+586,"Demasiadas reuniones, no me queda tiempo para trabajar. Pero por suerte no hay estres, se trabaja tranquilo."
+587,"sinceramente, falta liderazgo y nadie toma decisiones. cero flexibilidad con los horarios"
+588,"La verdad, hay muchos cursos y tiempo para hacerlos. Mi trabajo tiene sentido."
+589,"nada, no me piden cosas fuera de horario. tengo un mentor que me ayuda mucho"
+590,Paso el dia en reuniones que no sirven para nada.
+591,"Nada, la flexibilidad del home office es lo mejor. Mi líder me apoya y me da feedback. Me encanta el proyecto en el que estoy."
+592,me ascendieron este año. trabajo con gente muy capaz
+593,"En general, me ascendieron este año. Las reuniones son cortas y sirven."
+594,"En general, el sueldo esta bien para el mercado. Mi equipo es excelente."
+595,"nada, mi equipo es excelente"
+596,MI LIDER ME APOYA Y ME DA FEEDBACK. SIENTO QUE ESTOY CRECIENDO PROFESIONALMENTE. MI EQUIPO ES EXCELENTE.
+597,"Sinceramente, siento que estoy creciendo profesionalmente. Somos pocos para todo lo que hay que hacer."
+598,aprendo un monton todos los dias. me encanta el proyecto en el que estoy
+599,Valoran lo que hago. Mi equipo es excelente.
+600,"La verdad, mi líder me apoya y me da feedback. Hay muy buena onda con los compañeros. Se respetan los horarios."
