@@ -43,6 +43,7 @@ Once tablas. Diez se unen por `empleado_id` (600 empleados, 6 sedes); la restant
 | `nimbus_soporte_diario.csv` | 1.096 × 5 | **(agregada 17/09/2026 para la Clase 7)** tres años de tickets diarios de la mesa de ayuda, con tendencia, dos estacionalidades semanales opuestas, estacionalidad anual, feriados y un incidente. **No tiene `empleado_id`**: es una serie de la empresa, no del empleado |
 | `nimbus_desempeno.csv` | 600 × 12 | **(agregada 28/09/2026 para la Clase 9)** once indicadores de desempeño con dos factores latentes (cumplimiento y colaboración) en escalas mezcladas; el cumplimiento cae en quien renuncia |
 | `nimbus_patrones.csv` | 600 × 10 | **(agregada 05/10/2026 para la Clase 10)** patrones de trabajo: seis métricas de huella digital y tres ítems de encuesta, con cuatro perfiles latentes (carga × enganche) que se cruzan con la renuncia |
+| `nimbus_comentarios.csv` | 600 × 2 | **(agregada 16/10/2026 para la Clase 11)** respuesta abierta de la encuesta ("¿por qué pusiste esa nota?"), texto libre con el tono atado a `recomendaria_0a10` y el tema al perfil latente de la Clase 10 |
 
 > ⚠️ **Hay dos "bienestar" y NO son lo mismo.** Es deliberado, pero se confunden fácil:
 >
@@ -75,7 +76,7 @@ Once tablas. Diez se unen por `empleado_id` (600 empleados, 6 sedes); la restant
 | Generado | 2026-08 (regenerar con `python data/generar_toy_nimbus.py`) |
 | **URL de carga en notebooks** | espejo público: `https://raw.githubusercontent.com/tomdamelio/analitica_de_datos_alumnos/main/data/toy-nimbus/<archivo>.csv` |
 | **URL desde el sitio** | `https://analiticadedatos-udesa.com/data/toy-nimbus/<archivo>.csv` — `nimbus_empleados.csv`, `nimbus_salario.csv`, `nimbus_bienestar_diario.csv`, `nimbus_rrhh.csv` (agregada el 29/08/2026, al publicar la Clase 4), `nimbus_clima.csv` (agregada el 02/09/2026, al publicar la Clase 5), `nimbus_soporte_diario.csv` (Clase 7) y `nimbus_desempeno.csv` (agregada el 29/09/2026, al publicar la Clase 9). Todos están declarados en `resources:` (`_quarto.yml`) y enlazados desde la página de la clase que los usa |
-| Se usa en | Clase 1 (fundamentos de Python, piloto de fruta, ajuste no lineal salario~edad), Clase 2 (carga, `merge`, limpieza), Clase 3 (visualización), **Clase 4** (KNN sobre `nimbus_rrhh.csv`), **Clase 5** (regresión lineal y regularización sobre `nimbus_clima.csv`), **Clase 6** (regresión logística sobre `nimbus_rrhh.csv`, *confounding* con `nimbus_modalidad.csv`), **Clase 7** (series temporales sobre `nimbus_soporte_diario.csv`), **Clase 8** (árboles y random forest sobre `nimbus_rrhh.csv`), **Clase 9** (PCA sobre `nimbus_desempeno.csv`) y **Clase 10** (clustering sobre `nimbus_patrones.csv`, en preparación) |
+| Se usa en | Clase 1 (fundamentos de Python, piloto de fruta, ajuste no lineal salario~edad), Clase 2 (carga, `merge`, limpieza), Clase 3 (visualización), **Clase 4** (KNN sobre `nimbus_rrhh.csv`), **Clase 5** (regresión lineal y regularización sobre `nimbus_clima.csv`), **Clase 6** (regresión logística sobre `nimbus_rrhh.csv`, *confounding* con `nimbus_modalidad.csv`), **Clase 7** (series temporales sobre `nimbus_soporte_diario.csv`), **Clase 8** (árboles y random forest sobre `nimbus_rrhh.csv`), **Clase 9** (PCA sobre `nimbus_desempeno.csv`), **Clase 10** (clustering sobre `nimbus_patrones.csv`) y **Clase 11** (texto sobre `nimbus_comentarios.csv`, en preparación) |
 
 ### `nimbus_clima.csv` — encuesta de clima laboral 2026 (Clase 5)
 
@@ -528,6 +529,36 @@ corrida). K-means con `n_init=10` y `random_state=50`:
 > **Nota de entorno (05/10/2026):** el generador necesita `scikit-learn` y `statsmodels`
 > (`requirements.txt`). Correrlo con el `.venv` del repo.
 
+
+### `nimbus_comentarios.csv` — comentarios abiertos de la encuesta (Clase 11)
+
+Agregada el 16/10/2026, tabla aparte y con `Generator` propio (`SEED_COMENTARIOS = 60`).
+**Verificado por hash: los once CSV anteriores no cambiaron ni un byte.**
+
+Es la respuesta a la pregunta abierta que sigue a `recomendaria_0a10` (en `nimbus_patrones.csv`):
+"¿Por qué pusiste esa nota?". Dos columnas, `empleado_id` y `comentario`. **Es texto sintético**,
+armado con bancos de frases en castellano rioplatense: por eso los clasificadores rinden mejor que
+con texto real, y conviene decirlo en clase.
+
+- **Tono:** cada oración sale positiva con probabilidad logística en la nota (centrada en 5,5).
+- **Tema:** sale del perfil latente de la Clase 10 (Quemados → carga y reuniones; Desenganchados →
+  crecimiento; Nuevos → onboarding; Comprometidos → equipo).
+- **Trampas a propósito:** negaciones ("no me siento valorado", "nunca me faltó apoyo", "no me
+  puedo quejar"), ironía ("Genial, otra reunión que podría haber sido un mail"), sinónimos
+  (quemado, agotado, fundido, reventado).
+- **Ruido:** 25 % sin tildes, ~15 % en minúsculas, ~3 % en mayúsculas, 4,8 % en blanco (NaN), ~3 %
+  sin contenido ("nada", "-"), y muletillas al principio ("La verdad,", "Sinceramente,").
+
+Lo que la Clase 11 afirma (verificado 16/10/2026, 547 comentarios con más de 3 palabras;
+"recomienda" = nota ≥ 7, 39,3 %):
+
+| Método | Acierto |
+|---|---|
+| Siempre "no recomienda" | 0,607 (todo el corpus) / 0,606 (prueba) |
+| Diccionario de 44 palabras | 0,658 / 0,673 |
+| Bolsa de palabras + logística (prueba, 30 %, `random_state=11`) | 0,770 |
+| Ídem con bigramas | 0,770 |
+| Predecir `renuncia` desde el texto | 0,812, **por debajo** de la clase más común (0,83) |
 
 ## `student_dropout.csv` — deserción y éxito académico (Clase 10)
 
